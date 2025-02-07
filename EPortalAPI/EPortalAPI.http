@@ -1,0 +1,6 @@
+@EPortalAPI_HostAddress = http://localhost:5052
+
+GET {{EPortalAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

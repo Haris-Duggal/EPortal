@@ -1,0 +1,45 @@
+﻿@inject SkillsService skillsService
+
+@if (Teachingskills != null)
+{
+	<table class="table table-bordered">
+		<tr>
+			<th>Skill</th>
+			<th>Skill Type</th>
+			<th>Time Duration</th>
+		</tr>
+		@foreach (var skill in Teachingskills)
+		{
+			<tr>
+				<td>@skill.Skill</td>
+				<td>Taeching</td>
+				<td>@skill.TimeDuration</td>
+			</tr>
+		}
+		@if (Developmentskills != null)
+		{
+			@foreach (var skill in Developmentskills)
+			{
+				<tr>
+					<td>@skill.Skill</td>
+					<td>Development</td>
+					<td>@skill.TimeDuration</td>
+				</tr>
+			}
+		}
+		
+	</table>
+}
+
+
+@code {
+
+	[Parameter] public string? id { get; set; }
+	private List<SkillModel>? Teachingskills;
+	private List<SkillModel>? Developmentskills;
+	protected override async Task OnInitializedAsync()
+	{
+		Teachingskills = await skillsService.GetTeachingSkillsByIdAsync(id);
+		Developmentskills = await skillsService.GetDevelopmentSkillsByIdAsync(id);
+	}
+}

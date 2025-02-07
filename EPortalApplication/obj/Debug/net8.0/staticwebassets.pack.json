@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EPortalApplication.wz5j36h8ju.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "PackagePath": "staticwebassets\\data\\DevelopmentSkills.json"
+    },
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "PackagePath": "staticwebassets\\data\\TeachingSkills.json"
+    },
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "PackagePath": "staticwebassets\\data\\degrees.json"
+    },
+    {
+      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EPortalApplication.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EPortalApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EPortalApplication.props",
+      "PackagePath": "build\\EPortalApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EPortalApplication.props",
+      "PackagePath": "buildMultiTargeting\\EPortalApplication.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EPortalApplication.props",
+      "PackagePath": "buildTransitive\\EPortalApplication.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

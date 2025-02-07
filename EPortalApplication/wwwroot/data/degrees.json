@@ -1,0 +1,78 @@
+[
+    {
+        "DegreeType": "Matriculation (SSC)",
+        "Majors": [ "Science", "Arts", "Computer Science" ]
+    },
+    {
+        "DegreeType": "Intermediate (HSSC)",
+        "Majors": [ "Pre-Engineering", "Pre-Medical", "ICS (Computer Science)", "Commerce", "Humanities", "General Science" ]
+    },
+    {
+        "DegreeType": "Diploma (DAE, DBA, D.Com, etc.)",
+        "Majors": [ "Electrical Engineering", "Mechanical Engineering", "Civil Engineering", "Computer Science", "Commerce", "Business Administration" ]
+    },
+    {
+        "DegreeType": "Bachelor's (BA, BSc, BBA, B.Com, BS, etc.)",
+        "Majors": [ "Computer Science", "Software Engineering", "Electrical Engineering", "Mechanical Engineering", "Civil Engineering", "Business Administration", "Accounting & Finance", "Economics", "Mathematics", "Statistics", "Physics", "Chemistry", "Biotechnology", "Psychology", "Political Science", "Mass Communication", "Islamic Studies" ]
+    },
+    {
+        "DegreeType": "Master's (MA, MSc, MBA, M.Com, MS, etc.)",
+        "Majors": [ "Computer Science", "Software Engineering", "Electrical Engineering", "Mechanical Engineering", "Civil Engineering", "Business Administration", "Economics", "Mathematics", "Statistics", "Physics", "Chemistry", "Psychology", "Political Science", "Mass Communication", "Islamic Studies" ]
+    },
+    {
+        "DegreeType": "MPhil (Master of Philosophy)",
+        "Majors": [ "Computer Science", "Software Engineering", "Electrical Engineering", "Mechanical Engineering", "Civil Engineering", "Business Administration", "Economics", "Mathematics", "Statistics", "Physics", "Chemistry", "Psychology", "Political Science", "Mass Communication", "Islamic Studies" ]
+    },
+    {
+        "DegreeType": "Doctorate (PhD)",
+        "Majors": [ "Computer Science", "Software Engineering", "Electrical Engineering", "Mechanical Engineering", "Civil Engineering", "Business Administration", "Economics", "Mathematics", "Statistics", "Physics", "Chemistry", "Psychology", "Political Science", "Mass Communication", "Islamic Studies" ]
+    },
+    {
+        "DegreeType": "MBBS (Bachelor of Medicine & Surgery)",
+        "Majors": [ "Medicine", "Surgery" ]
+    },
+    {
+        "DegreeType": "BDS (Bachelor of Dental Surgery)",
+        "Majors": [ "Dentistry" ]
+    },
+    {
+        "DegreeType": "DPT (Doctor of Physical Therapy)",
+        "Majors": [ "Physical Therapy" ]
+    },
+    {
+        "DegreeType": "Pharm-D (Doctor of Pharmacy)",
+        "Majors": [ "Pharmacy" ]
+    },
+    {
+        "DegreeType": "LLB (Bachelor of Laws)",
+        "Majors": [ "Law" ]
+    },
+    {
+        "DegreeType": "B.Ed (Bachelor of Education)",
+        "Majors": [ "Education", "Special Education" ]
+    },
+    {
+        "DegreeType": "M.Ed (Master of Education)",
+        "Majors": [ "Education", "Special Education" ]
+    },
+    {
+        "DegreeType": "ACCA (Association of Chartered Certified Accountants)",
+        "Majors": [ "Accounting", "Finance" ]
+    },
+    {
+        "DegreeType": "CA (Chartered Accountant)",
+        "Majors": [ "Accounting", "Auditing", "Taxation" ]
+    },
+    {
+        "DegreeType": "CFA (Chartered Financial Analyst)",
+        "Majors": [ "Investment Management", "Financial Analysis" ]
+    },
+    {
+        "DegreeType": "Postgraduate Diploma",
+        "Majors": [ "Business Administration", "Computer Science", "Education", "Psychology", "Human Resource Management" ]
+    },
+    {
+        "DegreeType": "Other",
+        "Majors": [ "Miscellaneous" ]
+    }
+]

@@ -1,0 +1,38 @@
+﻿@inject EducationService educationService
+
+@if (educationModels != null)
+{
+	<table class="table table-bordered">
+		<tr>
+			<th> ID</th>
+			<th>Institute Name</th>
+			<th>Degree</th>
+			<th>Field of Study</th>
+			<th>Start Date</th>
+			<th>End Date</th>
+			<th>Grade</th>
+		</tr>
+		@foreach (var educationModel in educationModels)
+		{
+			<tr>
+				<td>@educationModel.EducationID</td>
+				<td>@educationModel.InstituteName</td>
+				<td>@educationModel.Degree</td>
+				<td>@educationModel.FieldOfStudy</td>
+				<td>@educationModel.StartDate</td>
+				<td>@educationModel.EndDate</td>
+				<td>@educationModel.Range</td>
+				
+			</tr>
+		}
+	</table>
+}
+
+@code {
+	[Parameter] public string? id { get; set; }
+	private List<EducationModel>? educationModels;
+	protected override async Task OnInitializedAsync()
+	{
+		educationModels = await educationService.GetEducationByIdAsync(id);
+	}
+}

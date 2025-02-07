@@ -1,0 +1,949 @@
+{
+  "Version": 1,
+  "Hash": "jQPdL3gd/ojLTKqpbQKun8YwBxzzuV1EAkjQj+gEM60=",
+  "Source": "EPortalApplication",
+  "BasePath": "_content/EPortalApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EPortalApplication\\wwwroot",
+      "Source": "EPortalApplication",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "EPortalApplication#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "wz5j36h8ju",
+      "Integrity": "HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "EPortalApplication#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "wz5j36h8ju",
+      "Integrity": "HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bpk8xqwxhs",
+      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "data/degrees#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "z7o5vyn8hk",
+      "Integrity": "38D1yFoXknxbl7/aKTvfnHG2IK0d0Bu7wC+ZyE1gCK4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\degrees.json"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "data/DevelopmentSkills#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ebea5nqy1q",
+      "Integrity": "+mfhSZLfCWd2CBLQWpcKB+XMJAdc6RmFAy2V8UsfIgs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\DevelopmentSkills.json"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "data/TeachingSkills#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2bxpswublu",
+      "Integrity": "3jCi4AmxD/k5gf9fqjBbHzo5e3k+j3JUEDCtRRwhNAk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\TeachingSkills.json"
+    },
+    {
+      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "SourceId": "EPortalApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "BasePath": "_content/EPortalApplication",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "app.da95v2qkru.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bpk8xqwxhs"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "data/degrees.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"38D1yFoXknxbl7/aKTvfnHG2IK0d0Bu7wC+ZyE1gCK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Feb 2025 19:10:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-38D1yFoXknxbl7/aKTvfnHG2IK0d0Bu7wC+ZyE1gCK4="
+        }
+      ]
+    },
+    {
+      "Route": "data/degrees.z7o5vyn8hk.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"38D1yFoXknxbl7/aKTvfnHG2IK0d0Bu7wC+ZyE1gCK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 01 Feb 2025 19:10:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z7o5vyn8hk"
+        },
+        {
+          "Name": "label",
+          "Value": "data/degrees.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-38D1yFoXknxbl7/aKTvfnHG2IK0d0Bu7wC+ZyE1gCK4="
+        }
+      ]
+    },
+    {
+      "Route": "data/DevelopmentSkills.ebea5nqy1q.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+mfhSZLfCWd2CBLQWpcKB+XMJAdc6RmFAy2V8UsfIgs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 12:59:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ebea5nqy1q"
+        },
+        {
+          "Name": "label",
+          "Value": "data/DevelopmentSkills.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+mfhSZLfCWd2CBLQWpcKB+XMJAdc6RmFAy2V8UsfIgs="
+        }
+      ]
+    },
+    {
+      "Route": "data/DevelopmentSkills.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "103"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+mfhSZLfCWd2CBLQWpcKB+XMJAdc6RmFAy2V8UsfIgs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 12:59:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+mfhSZLfCWd2CBLQWpcKB+XMJAdc6RmFAy2V8UsfIgs="
+        }
+      ]
+    },
+    {
+      "Route": "data/TeachingSkills.2bxpswublu.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "101"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3jCi4AmxD/k5gf9fqjBbHzo5e3k+j3JUEDCtRRwhNAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 12:49:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2bxpswublu"
+        },
+        {
+          "Name": "label",
+          "Value": "data/TeachingSkills.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3jCi4AmxD/k5gf9fqjBbHzo5e3k+j3JUEDCtRRwhNAk="
+        }
+      ]
+    },
+    {
+      "Route": "data/TeachingSkills.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "101"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3jCi4AmxD/k5gf9fqjBbHzo5e3k+j3JUEDCtRRwhNAk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 12:49:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3jCi4AmxD/k5gf9fqjBbHzo5e3k+j3JUEDCtRRwhNAk="
+        }
+      ]
+    },
+    {
+      "Route": "EPortalApplication.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8119"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Feb 2025 15:54:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0="
+        }
+      ]
+    },
+    {
+      "Route": "EPortalApplication.styles.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8119"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Feb 2025 15:54:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0="
+        }
+      ]
+    },
+    {
+      "Route": "EPortalApplication.wz5j36h8ju.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8119"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Feb 2025 15:54:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wz5j36h8ju"
+        },
+        {
+          "Name": "label",
+          "Value": "EPortalApplication.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0="
+        }
+      ]
+    },
+    {
+      "Route": "EPortalApplication.wz5j36h8ju.styles.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8119"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 02 Feb 2025 15:54:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wz5j36h8ju"
+        },
+        {
+          "Name": "label",
+          "Value": "EPortalApplication.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    }
+  ]
+}

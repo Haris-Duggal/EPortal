@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "ePortal",
+    "Projects": [
+      {
+        "Path": "EPortalAPI\\EPortalAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "EPortalApplication\\EPortalApplication.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

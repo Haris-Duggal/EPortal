@@ -1,0 +1,44 @@
+﻿@inject ExperienceService ExperienceService
+
+@if (ExperienceModels != null)
+{
+	<table class="table table-bordered">
+		<tr>
+			<th>Title</th>
+			<th>Employement Type</th>
+			<th>Company Name</th>
+			<th>Currently Working</th>
+			<th>Start Date</th>
+			<th>End Date</th>
+			<th>Location</th>
+			<th>Location type</th>
+			<th>Description</th>
+		</tr>
+		@foreach (var ExperienceModel in ExperienceModels)
+		{
+			<tr>
+				<td>@ExperienceModel.Title</td>
+				<td>@ExperienceModel.EmploymentType</td>
+				<td>@ExperienceModel.CompanyName</td>
+				<td>@ExperienceModel.CurrentlyWorking</td>
+				<td>@ExperienceModel.StartDate</td>
+				<td>@ExperienceModel.EndDate</td>
+				<td>@ExperienceModel.Location</td>
+				<td>@ExperienceModel.LocationType</td>
+				<td>@ExperienceModel.Description</td>
+
+			</tr>
+		}
+	</table>
+}
+
+@code {
+	[Parameter] public string? id { get; set; }
+
+	private List<ExperienceModel>? ExperienceModels;
+
+	protected override async Task OnInitializedAsync()
+	{
+		ExperienceModels = await ExperienceService.GetExperienceByIdAsync(id);
+	}
+}

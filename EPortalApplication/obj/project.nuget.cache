@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ovVIncJ7yEQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\EPortalApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Haris Duggal\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

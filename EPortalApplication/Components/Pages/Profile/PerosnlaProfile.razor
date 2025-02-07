@@ -1,0 +1,125 @@
+﻿@page "/pro/{id}"
+@layout MainProfileLayout
+@inject ProfileServiceClass profileservice
+@inject EducationService educationService
+@rendermode InteractiveServer
+
+<table class="table table-bordered">
+	<tr>
+		<td>First Name</td>
+		<td>@personalProfileModel.FirstName</td>
+	</tr>
+	<tr>
+		<td>Last Name</td>
+		<td>@personalProfileModel.LastName</td>
+	</tr>
+	<tr>
+		<td>Bio</td>
+		<td>@personalProfileModel.Bio</td>
+	</tr>
+	<tr>
+		<td>Profile Picture</td>
+		<td>@personalProfileModel.ProfilePictureUrl</td>
+	</tr>
+	<tr>
+		<td>Date of Birth</td>
+		<td>@personalProfileModel.DateOfBirth</td>
+	</tr>
+	<tr>
+		<td>Created At</td>
+		<td>@personalProfileModel.CreatedAt</td>
+	</tr>
+	<tr>
+		<td>Updated At</td>
+		<td>@personalProfileModel.UpdatedAt</td>
+	</tr>
+</table>
+
+<div class="mt-5">
+	<button class="btn btn-primary" @onclick="ShowAddForm">Add Education</button>
+</div>
+
+@if (isAddFormVisible)
+{
+	<AddEducation ChangeState="HideAddForm"/>
+}
+<div class="mt-5">
+	<Education id="@id" @key="@educationListKey" />
+</div>
+
+<button class="btn btn-primary" @onclick="ShowExperienceForm">Add Experience</button>
+
+@if (isExperienceFormVisible)
+{
+	<AddExperience ChangeState="HideExperienceForm" />
+}
+
+<div class="mt-5">
+	<Experience id="@id" @key="experienceListKey"/>
+</div>
+
+<div class="mt-5">
+	<button class="btn btn-primary" @onclick="ShowSkillForm">Add Skill</button>
+</div>
+
+@if (isSkillFormVisible)
+{
+	<AddSkill ChangeState="HideSkillForm" />
+}
+
+<div class="mt-5">
+	<Skills id="@id" @key="skillListKey" />
+</div>
+
+@code {
+	[Parameter] public string? id { get; set; }
+	bool isAddFormVisible = false;
+	bool isExperienceFormVisible = false;
+	bool isSkillFormVisible = false;
+
+	private PersonalProfileModel personalProfileModel = new PersonalProfileModel();
+	private List<EducationModel>? educationModels { get; set; } = new List<EducationModel>();
+	private Guid educationListKey = Guid.NewGuid();
+	private Guid experienceListKey = Guid.NewGuid();
+	private Guid skillListKey = Guid.NewGuid();
+
+	protected override async Task OnInitializedAsync()
+	{
+		personalProfileModel = await profileservice.GetProfileByIdAsync(id!);
+		educationModels = await educationService.GetEducationByIdAsync(id!);
+	}
+
+	private void ShowAddForm()
+	{
+		isAddFormVisible = true;
+	}
+
+	private void HideAddForm()
+	{
+		isAddFormVisible = false;
+		educationListKey = Guid.NewGuid();
+	}
+
+	private void ShowExperienceForm()
+	{
+		isExperienceFormVisible = true;
+	}
+
+	private void HideExperienceForm()
+	{
+		isExperienceFormVisible = false;
+		experienceListKey = Guid.NewGuid();
+	}
+
+	private void ShowSkillForm()
+	{
+		isSkillFormVisible = true;
+	}
+
+	private void HideSkillForm()
+	{
+		isSkillFormVisible = false;
+		skillListKey = Guid.NewGuid();
+	}
+
+}

@@ -1,0 +1,72 @@
+﻿@* @page "/personprofile" *@
+@* @inject ProfileServiceClass profileservice *@
+@* @rendermode InteractiveServer *@
+
+
+@* <EditForm Model="@personalProfileModel" OnValidSubmit="@CreateProfile"> *@
+
+@* 	<input type="text" name="name" placeholder="Enter FirstName" @bind-value=personalProfileModel.FirstName/> *@
+@* 	<input type="text" name="name" placeholder="Enter Last Name" @bind-value=personalProfileModel.LastName/> *@
+@* 	<input type="text" name="name" placeholder="Enter Profile URL" @bind-value=personalProfileModel.ProfilePictureUrl/> *@
+@* 	<input type="text" name="name" placeholder="Enter Bio" @bind-value=personalProfileModel.Bio/> *@
+@* 	<input type="date" name="name" placeholder="Enter Bio" @bind-value=personalProfileModel.DateOfBirth/> *@
+
+@* 	<button type="submit">Save</button> *@
+@* </EditForm> *@
+
+@* <table class="table table-bordered"> *@
+@* 	<tr> *@
+@* 		<th>ID</th> *@
+@* 		<th>First Name</th> *@
+@* 		<th>Last Name</th> *@
+@* 		<th>Date of Birth</th> *@
+@* 		<th>Bio</th> *@
+@* 		<th>Action</th> *@
+@* 	</tr> *@
+@* 	@foreach (var profile in personalProfiles!) *@
+@* 	{ *@
+@* 		<tr> *@
+@* 			<td>@profile.UserID</td> *@
+@* 			<td>@profile.FirstName</td> *@
+@* 			<td>@profile.LastName</td> *@
+@* 			<td>@profile.DateOfBirth</td> *@
+@* 			<td>@profile.Bio</td> *@
+@* 			<td> *@
+@* 				<button class="btn btn-primary btn-sm" @onclick="()=>DeleteProfile(profile.UserID!)">Delete</button> *@
+@* 			</td> *@
+@* 		</tr> *@
+		
+@* 	} *@
+@* </table> *@
+
+
+
+
+
+@* @code { *@
+
+@* 	private PersonalProfileModel personalProfileModel = new PersonalProfileModel(); *@
+@* 	private List<PersonalProfileModel>? personalProfiles { get; set; } = new List<PersonalProfileModel>(); *@
+
+@* 	protected override async Task OnInitializedAsync() *@
+@* 	{ *@
+@* 		personalProfiles = await profileservice.GetProfileAsync(); *@
+@* 	} *@
+
+
+
+@* 	private async Task DeleteProfile(string uid) *@
+@* 	{ *@
+		
+@* 		await profileservice.DeleteProfile(uid); *@
+@* 		personalProfiles = await profileservice.GetProfileAsync(); *@
+@* 		StateHasChanged(); *@
+@* 	} *@
+
+@* 	private async Task CreateProfile() *@
+@* 	{ *@
+@* 		await profileservice.CreateProfile(personalProfileModel); *@
+@* 		personalProfiles = await profileservice.GetProfileAsync(); *@
+@* 		StateHasChanged(); *@
+@* 	} *@
+@* } *@
