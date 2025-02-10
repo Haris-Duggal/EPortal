@@ -14,6 +14,7 @@ namespace Entities.DTOs
 
     public class CreateEducationDTO
     {
+        public string? fk_UserID { get; set; }
         public string? InstituteName { get; set; }
         public string? Degree { get; set; }
         public string? FieldOfStudy { get; set; }
@@ -24,7 +25,6 @@ namespace Entities.DTOs
 
     public class UpdateEducationDTO
     {
-        public int EducationID { get; set; }
         public string? InstituteName { get; set; }
         public string? Degree { get; set; }
         public string? FieldOfStudy { get; set; }

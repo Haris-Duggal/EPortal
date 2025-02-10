@@ -2,7 +2,6 @@
 @inject JsonService jsonService
 @rendermode InteractiveServer
 
-
 <EditForm Model="@educationModel" OnValidSubmit="@CreateEducation">
 	<div class="d-flex justify-content-between">
 		<input type="text" class="form-control" id="InstituteName" placeholder="Enter Institute Name" @bind-value=educationModel.InstituteName>
@@ -36,9 +35,8 @@
 	</div>
 </EditForm>
 
-
 @code {
-	private EducationModel educationModel = new EducationModel();
+	private CreateEducationDTO educationModel = new CreateEducationDTO();
 	private List<Degree>? Degrees { get; set; }
 	private List<string>? DegreeMajors { get; set; }
 	private string? SelecteDegree { get; set; }

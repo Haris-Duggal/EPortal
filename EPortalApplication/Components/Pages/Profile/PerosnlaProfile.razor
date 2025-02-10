@@ -4,122 +4,204 @@
 @inject EducationService educationService
 @rendermode InteractiveServer
 
-<table class="table table-bordered">
-	<tr>
-		<td>First Name</td>
-		<td>@personalProfileModel.FirstName</td>
-	</tr>
-	<tr>
-		<td>Last Name</td>
-		<td>@personalProfileModel.LastName</td>
-	</tr>
-	<tr>
-		<td>Bio</td>
-		<td>@personalProfileModel.Bio</td>
-	</tr>
-	<tr>
-		<td>Profile Picture</td>
-		<td>@personalProfileModel.ProfilePictureUrl</td>
-	</tr>
-	<tr>
-		<td>Date of Birth</td>
-		<td>@personalProfileModel.DateOfBirth</td>
-	</tr>
-	<tr>
-		<td>Created At</td>
-		<td>@personalProfileModel.CreatedAt</td>
-	</tr>
-	<tr>
-		<td>Updated At</td>
-		<td>@personalProfileModel.UpdatedAt</td>
-	</tr>
-</table>
-
-<div class="mt-5">
-	<button class="btn btn-primary" @onclick="ShowAddForm">Add Education</button>
-</div>
-
-@if (isAddFormVisible)
+@if (isLoading)
 {
-	<AddEducation ChangeState="HideAddForm"/>
+    <p>Loading...</p>
 }
-<div class="mt-5">
-	<Education id="@id" @key="@educationListKey" />
-</div>
-
-<button class="btn btn-primary" @onclick="ShowExperienceForm">Add Experience</button>
-
-@if (isExperienceFormVisible)
+else if (errorMessage != null)
 {
-	<AddExperience ChangeState="HideExperienceForm" />
+    <p class="text-danger">@errorMessage</p>
 }
-
-<div class="mt-5">
-	<Experience id="@id" @key="experienceListKey"/>
-</div>
-
-<div class="mt-5">
-	<button class="btn btn-primary" @onclick="ShowSkillForm">Add Skill</button>
-</div>
-
-@if (isSkillFormVisible)
+else if (personalProfile != null)
 {
-	<AddSkill ChangeState="HideSkillForm" />
-}
+    <section class="container bg-light shadow-sm"
+             style="background-image:url(https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)">
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-md-12">
+                   <div class="d-flex">
+                        <div><img src=@personalProfile.ProfilePictureUrl style="width:120px; height:120px; border-radius:100%; padding:5px; border:1px solid silver" /></div>
+                        <div><h4 class="pt-4 ps-2">@personalProfile.FirstName @personalProfile.LastName</h4><p class="ps-2 sm">@personalProfile.Bio</p></div>
+                   </div>
+                   <div class="col-md-12">
+                       <div class="d-flex">
+                           <div>
+                                <span class="fw-bolder">Joind On :</span> @personalProfile.CreatedAt
+                           </div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="mt-5">
-	<Skills id="@id" @key="skillListKey" />
-</div>
+    <section class="container bg-light mt-5 shadow-sm ">
+        <div class="container p-5">
+            <div class="col-md-12">
+               <div class="d-flex justify-content-between mb-5">
+                    <div>  <h3>Education</h3></div>
+                    <div> <button class="btn btn-primary" @onclick="ShowAddForm">+</button></div>
+                  
+               </div>
+                <div>
+                    @if (isAddFormVisible)
+                    {
+                        <AddEducation ChangeState="HideAddForm" />
+                    }
+                </div>
+                <div> <Education id="@id" @key="@educationListKey" /></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container bg-light mt-5 shadow-sm ">
+        <div class="container p-5">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between mb-5">
+                    <div>  <h3>Experience</h3></div>
+                    <div> <button class="btn btn-primary" @onclick="ShowExperienceForm">+</button></div>
+
+                </div>
+                <div>
+                    @if (isExperienceFormVisible)
+                    {
+                        <AddExperience ChangeState="HideExperienceForm" />
+                    }
+                </div>
+                <div> <Experience id="@id" @key="experienceListKey" /></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container bg-light mt-5 shadow-sm mb-5">
+        <div class="container p-5">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between mb-5">
+                    <div>  <h3>Skills</h3></div>
+                    <div> <button class="btn btn-primary" @onclick="ShowSkillForm">+</button></div>
+
+                </div>
+                <div>
+                    @if (isSkillFormVisible)
+                    {
+                        <AddSkill ChangeState="HideSkillForm" />
+                    }
+                </div>
+                <div> <Skills id="@id" @key="skillListKey" /></div>
+            </div>
+        </div>
+    </section>
+    @* <table class="table table-bordered"> *@
+      
+    @*     <tr> *@
+    @*         <td>Date of Birth</td> *@
+    @*         <td>@personalProfile.DateOfBirth</td> *@
+    @*     </tr> *@
+    @*     <tr> *@
+    @*         <td>Created At</td> *@
+    @*         <td>@personalProfile.CreatedAt</td> *@
+    @*     </tr> *@
+    @*     <tr> *@
+    @*         <td>Updated At</td> *@
+    @*         <td>@personalProfile.UpdatedAt</td> *@
+    @*     </tr> *@
+    @* </table> *@
+
+    @* <div class="mt-5"> *@
+       
+    @* </div> *@
+
+    @* @if (isAddFormVisible) *@
+    @* { *@
+    @*     <AddEducation ChangeState="HideAddForm" /> *@
+    @* } *@
+    @* <div class="mt-5"> *@
+    @*     <Education id="@id" @key="@educationListKey" /> *@
+    @* </div> *@
+
+    
+
+    @* @if (isExperienceFormVisible) *@
+    @* { *@
+    @*     <AddExperience ChangeState="HideExperienceForm" /> *@
+    @* } *@
+
+    @* <div class="mt-5"> *@
+    @*     <Experience id="@id" @key="experienceListKey" /> *@
+    @* </div> *@
+
+    @* <div class="mt-5"> *@
+        
+    @* </div> *@
+
+    
+
+    @* <div class="mt-5"> *@
+        
+    @* </div> *@
+}
 
 @code {
-	[Parameter] public string? id { get; set; }
-	bool isAddFormVisible = false;
-	bool isExperienceFormVisible = false;
-	bool isSkillFormVisible = false;
+    [Parameter] public string? id { get; set; }
+    bool isAddFormVisible = false;
+    bool isExperienceFormVisible = false;
+    bool isSkillFormVisible = false;
+    bool isLoading = true;
+    string? errorMessage = null;
 
-	private PersonalProfileModel personalProfileModel = new PersonalProfileModel();
-	private List<EducationModel>? educationModels { get; set; } = new List<EducationModel>();
-	private Guid educationListKey = Guid.NewGuid();
-	private Guid experienceListKey = Guid.NewGuid();
-	private Guid skillListKey = Guid.NewGuid();
+    private ProfileDTO? personalProfile = null;
+    private List<EducationModel>? educationModels { get; set; } = new List<EducationModel>();
+    private Guid educationListKey = Guid.NewGuid();
+    private Guid experienceListKey = Guid.NewGuid();
+    private Guid skillListKey = Guid.NewGuid();
 
-	protected override async Task OnInitializedAsync()
-	{
-		personalProfileModel = await profileservice.GetProfileByIdAsync(id!);
-		educationModels = await educationService.GetEducationByIdAsync(id!);
-	}
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            personalProfile = await profileservice.GetProfileByIdAsync(id!);
+            educationModels = await educationService.GetEducationByIdAsync(id);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading profile: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
 
-	private void ShowAddForm()
-	{
-		isAddFormVisible = true;
-	}
+    private void ShowAddForm()
+    {
+        isAddFormVisible = true;
+    }
 
-	private void HideAddForm()
-	{
-		isAddFormVisible = false;
-		educationListKey = Guid.NewGuid();
-	}
+    private void HideAddForm()
+    {
+        isAddFormVisible = false;
+        educationListKey = Guid.NewGuid();
+    }
 
-	private void ShowExperienceForm()
-	{
-		isExperienceFormVisible = true;
-	}
+    private void ShowExperienceForm()
+    {
+        isExperienceFormVisible = !isExperienceFormVisible;
+    }
 
-	private void HideExperienceForm()
-	{
-		isExperienceFormVisible = false;
-		experienceListKey = Guid.NewGuid();
-	}
+    private void HideExperienceForm()
+    {
+        isExperienceFormVisible = false;
+        experienceListKey = Guid.NewGuid();
+    }
 
-	private void ShowSkillForm()
-	{
-		isSkillFormVisible = true;
-	}
+    private void ShowSkillForm()
+    {
+        isSkillFormVisible = true;
+    }
 
-	private void HideSkillForm()
-	{
-		isSkillFormVisible = false;
-		skillListKey = Guid.NewGuid();
-	}
-
+    private void HideSkillForm()
+    {
+        isSkillFormVisible = false;
+        skillListKey = Guid.NewGuid();
+    }
 }

@@ -24,6 +24,7 @@ namespace Entities.DTOMappers
         {
             return new EducationModel
             {
+                fk_UserID = dto.fk_UserID,
                 InstituteName = dto.InstituteName,
                 Degree = dto.Degree,
                 FieldOfStudy = dto.FieldOfStudy,
@@ -37,7 +38,6 @@ namespace Entities.DTOMappers
         {
             return new EducationModel
             {
-                EducationID = dto.EducationID,
                 InstituteName = dto.InstituteName,
                 Degree = dto.Degree,
                 FieldOfStudy = dto.FieldOfStudy,

@@ -3,6 +3,7 @@ using Entities.DTOMappers;
 using EPortalAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Entities.Models;
 
 namespace EPortalAPI.Controllers
 {
@@ -32,7 +33,7 @@ namespace EPortalAPI.Controllers
         }
 
         [HttpGet("{userId}")]
-        public async Task<ActionResult<List<SkillDTO>>> GetTeachingSkillModel(string userId)
+        public async Task<ActionResult<List<SkillModel>>> GetTeachingSkillModel(string userId)
         {
             try
             {
@@ -57,8 +58,8 @@ namespace EPortalAPI.Controllers
                 var teachingSkillModel = createSkillDTO.ToModel();
                 SqlParameter[] sp =
                 {
-                    new SqlParameter("@fk_UserID", teachingSkillModel.fk_UserID),
-                    new SqlParameter("@SkillName", teachingSkillModel.Skill),
+                    new SqlParameter("@fk_UserID", "911"),
+                    new SqlParameter("@SkillName", teachingSkillModel.SkillName),
                     new SqlParameter("@TimeDuration", teachingSkillModel.TimeDuration)
                 };
                 await _teachingSkillService.CreateTeachingSkillModel("SP_Post_TeachingSkill", sp);
@@ -70,17 +71,17 @@ namespace EPortalAPI.Controllers
             }
         }
 
-        [HttpPut("{userId}")]
-        public async Task<ActionResult> UpdateTeachingSkillModel(UpdateSkillDTO updateSkillDTO, string userId)
+        [HttpPut("{SkillID}")]
+        public async Task<ActionResult> UpdateTeachingSkillModel(SkillModel model)
         {
             try
             {
-                var teachingSkillModel = updateSkillDTO.ToModel();
+                
                 SqlParameter[] sp =
                 {
-                    new SqlParameter("@fk_UserID", userId),
-                    new SqlParameter("@SkillName", teachingSkillModel.Skill),
-                    new SqlParameter("@TimeDuration", teachingSkillModel.TimeDuration)
+                    new SqlParameter("@SkillID", model.SkillID),
+                    new SqlParameter("@SkillName", model.SkillName),
+                    new SqlParameter("@TimeDuration", model.TimeDuration)
                 };
                 await _teachingSkillService.UpdateTeachingSkillModel("SP_Put_TeachingSkill", sp);
                 return Ok();

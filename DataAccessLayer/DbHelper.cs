@@ -6,7 +6,7 @@ namespace Database
     {
         public static SqlConnection GetConnection()
         {
-            return new SqlConnection("Data Source=DESKTOP-FK56QQ3\\SQLEXPRESS;Initial Catalog=EPortal;Integrated Security=True;Trust Server Certificate=True");
+            return new SqlConnection("Data Source=DESKTOP-GIOCVN1\\SQLEXPRESS;Initial Catalog=EPortal;Integrated Security=True;Trust Server Certificate=True");
         }
     }
 }

@@ -236,11 +236,16 @@
   {
     "ContainingType": "EPortalAPI.Controllers.EducationController",
     "Method": "UpdateEducation",
-    "RelativePath": "api/Education",
+    "RelativePath": "api/Education/{eduID}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "eduID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
       {
         "Name": "updateEducationDTO",
         "Type": "Entities.DTOs.UpdateEducationDTO",
@@ -319,22 +324,6 @@
   },
   {
     "ContainingType": "EPortal.Controllers.ExperienceController",
-    "Method": "RemoveExperience",
-    "RelativePath": "api/Experience",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EPortal.Controllers.ExperienceController",
     "Method": "UpdateExperience",
     "RelativePath": "api/Experience/{ExpId}",
     "HttpMethod": "PUT",
@@ -349,6 +338,22 @@
       {
         "Name": "ExpId",
         "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EPortal.Controllers.ExperienceController",
+    "Method": "RemoveExperience",
+    "RelativePath": "api/Experience/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -507,6 +512,27 @@
   },
   {
     "ContainingType": "EPortalAPI.Controllers.TeachingSkillController",
+    "Method": "UpdateTeachingSkillModel",
+    "RelativePath": "api/TeachingSkill/{SkillID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Entities.Models.SkillModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "SkillID",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EPortalAPI.Controllers.TeachingSkillController",
     "Method": "GetTeachingSkillModel",
     "RelativePath": "api/TeachingSkill/{userId}",
     "HttpMethod": "GET",
@@ -521,7 +547,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Entities.DTOs.SkillDTO, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.SkillModel, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -530,27 +556,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "EPortalAPI.Controllers.TeachingSkillController",
-    "Method": "UpdateTeachingSkillModel",
-    "RelativePath": "api/TeachingSkill/{userId}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "updateSkillDTO",
-        "Type": "Entities.DTOs.UpdateSkillDTO",
-        "IsRequired": true
-      },
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "EPortalAPI.Controllers.TeachingSkillController",

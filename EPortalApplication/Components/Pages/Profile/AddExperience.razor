@@ -13,10 +13,10 @@
 		<option value="FreeLance">FreeLance</option>
 	</select>
 	<input type="text" class="form-control" placeholder="Company" @bind-value="experience.CompanyName" />
-	<InputCheckbox  @bind-Value="experience.CurrentlyWorking"/>
+	<InputCheckbox @bind-Value="experience.CurrentlyWorking" />
 
-	<input type="date" class="form-control" placeholder="mm/dd/yy" @bind="experience.StartDate"/>
-	<input type="date"  class="form-control" placeholder="mm/dd/yy" @bind="experience.EndDate" /> 
+	<input type="date" class="form-control" placeholder="mm/dd/yy" @bind="experience.StartDate" />
+	<input type="date" class="form-control" placeholder="mm/dd/yy" @bind="experience.EndDate" />
 
 	<input type="text" class="form-control" placeholder="Location" @bind-value="experience.Location" />
 	<select class="form-control" @bind="experience.LocationType">
@@ -31,7 +31,7 @@
 
 @code {
 
-	private ExperienceModel experience = new ExperienceModel();
+	private CreateExperienceDTO experience = new CreateExperienceDTO();
 	[Parameter] public EventCallback ChangeState { get; set; }
 
 	private async Task CreateExperience()
@@ -39,7 +39,4 @@
 		await experienceService.CreateExperience(experience);
 		await ChangeState.InvokeAsync();
 	}
-
-
-
 }

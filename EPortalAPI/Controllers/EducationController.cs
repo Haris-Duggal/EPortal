@@ -71,15 +71,15 @@ namespace EPortalAPI.Controllers
             }
         }
 
-        [HttpPut]
-        public async Task<ActionResult> UpdateEducation(UpdateEducationDTO updateEducationDTO)
+        [HttpPut ("{eduID}")]
+        public async Task<ActionResult> UpdateEducation(int eduID,UpdateEducationDTO updateEducationDTO)
         {
             try
             {
                 var model = updateEducationDTO.ToModel();
                 SqlParameter[] sp =
                 {
-                    new SqlParameter("@EducationID", model.EducationID),
+                    new SqlParameter("@EducationID", eduID),
                     new SqlParameter("@InstituteName", model.InstituteName),
                     new SqlParameter("@Degree", model.Degree),
                     new SqlParameter("@FieldOfStudy", model.FieldOfStudy),

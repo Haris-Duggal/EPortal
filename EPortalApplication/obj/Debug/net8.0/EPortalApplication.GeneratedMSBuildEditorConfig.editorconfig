@@ -44,6 +44,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXEFkZFNraWxsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Haris Duggal/source/repos/EPortal/EPortalApplication/Components/Pages/Profile/DeleteModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXERlbGV0ZU1vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Haris Duggal/source/repos/EPortal/EPortalApplication/Components/Pages/Profile/EditEducation.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXEVkaXRFZHVjYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Haris Duggal/source/repos/EPortal/EPortalApplication/Components/Pages/Profile/EditExperience.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXEVkaXRFeHBlcmllbmNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Haris Duggal/source/repos/EPortal/EPortalApplication/Components/Pages/Profile/EditSkill.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXEVkaXRTa2lsbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Haris Duggal/source/repos/EPortal/EPortalApplication/Components/Pages/Profile/Education.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXEVkdWNhdGlvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

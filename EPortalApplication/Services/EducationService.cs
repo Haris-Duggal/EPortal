@@ -1,6 +1,8 @@
 ﻿using System.Net.Http.Json;
-using System.Text.Json;
+using Entities.DTOs;
+using Entities.DTOMappers;
 using Entities.Models;
+
 namespace EPortalApplication.Services
 {
     public class EducationService
@@ -11,25 +13,80 @@ namespace EPortalApplication.Services
         {
             _httpClient = httpClientFactory.CreateClient("API");
         }
-        public async Task<List<EducationModel>> GetEducationAsync()
+
+        public async Task<List<EducationDTO>> GetEducationAsync()
         {
-            var response = await _httpClient!.GetFromJsonAsync<List<EducationModel>>("api/Education");
-            return response ?? new List<EducationModel>();
+            try
+            {
+                var response = await _httpClient!.GetFromJsonAsync<List<EducationDTO>>("api/Education");
+                return response ?? new List<EducationDTO>();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+                return new List<EducationDTO>();
+            }
         }
+
         public async Task<List<EducationModel>> GetEducationByIdAsync(string uid)
         {
-            var response = await _httpClient!.GetFromJsonAsync<List<EducationModel>>($"api/Education/{uid}");
-            return response ?? new List<EducationModel>();
+            try
+            {
+                var response = await _httpClient!.GetFromJsonAsync<List<EducationModel>>($"api/Education/{uid}");
+                return response ?? new List<EducationModel>();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+                return new List<EducationModel>();
+            }
         }
+
         public async Task DeleteEducation(string uid)
         {
-            await _httpClient!.DeleteAsync($"api/Education/{uid}");
-            
+            try
+            {
+                await _httpClient!.DeleteAsync($"api/Education/{uid}");
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+            }
         }
-        public async Task CreateEducation(EducationModel education)
+
+        public async Task CreateEducation(CreateEducationDTO education)
         {
-            await _httpClient!.PostAsJsonAsync("api/Education", education);
-            
+            try
+            {
+                await _httpClient!.PostAsJsonAsync("api/Education", education);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+            }
+        }
+        public async Task UpdateEducation(int eduID, EducationModel education)
+        {
+            try
+            {
+                await _httpClient!.PutAsJsonAsync($"api/Education/{eduID}", education);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        public async Task DeleteEducation(int id)
+        {
+            try
+            {
+                await _httpClient.DeleteAsync($"api/Education/{id}");
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error is : {ex.Message}");
+            }
         }
     }
 }

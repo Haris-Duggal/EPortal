@@ -1,4 +1,6 @@
-﻿using Entities.Models;
+﻿using Entities.DTOs;
+using Entities.DTOMappers;
+using Entities.Models;
 
 namespace EPortalApplication.Services
 {
@@ -11,30 +13,59 @@ namespace EPortalApplication.Services
             _httpClient = httpClientFactory.CreateClient("API");
         }
 
-        public async Task<List<PersonalProfileModel>> GetProfileAsync()
+        public async Task<List<ProfileDTO>> GetProfileAsync()
         {
-            var response = await _httpClient.GetFromJsonAsync<List<PersonalProfileModel>>("api/PersonalProfile");
-            return response ?? new List<PersonalProfileModel>();
-
+            try
+            {
+                var response = await _httpClient.GetFromJsonAsync<List<ProfileDTO>>("api/PersonalProfile");
+                return response ?? new List<ProfileDTO>();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+                return new List<ProfileDTO>();
+            }
         }
 
-        public async Task<PersonalProfileModel> GetProfileByIdAsync(string uid)
+        public async Task<ProfileDTO> GetProfileByIdAsync(string uid)
         {
-            var response = await _httpClient.GetFromJsonAsync<PersonalProfileModel>($"api/PersonalProfile/{uid}");
-            return response ?? new PersonalProfileModel();
+            try
+            {
+                var response = await _httpClient.GetFromJsonAsync<ProfileDTO>($"api/PersonalProfile/{uid}");
+                return response ?? new ProfileDTO();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+                return new ProfileDTO();
+            }
         }
 
         public async Task DeleteProfile(string uid)
         {
-           var IsTrue= await _httpClient.DeleteAsync($"api/PersonalProfile/{uid}");
-            Console.WriteLine(IsTrue);
-
+            try
+            {
+                var response = await _httpClient.DeleteAsync($"api/PersonalProfile/{uid}");
+                Console.WriteLine(response);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+            }
         }
 
-        public async Task CreateProfile(PersonalProfileModel profile)
+        public async Task CreateProfile(CreateProfileDTO profile)
         {
-            var response = await _httpClient.PostAsJsonAsync("api/PersonalProfile", profile);
-            Console.WriteLine(response);
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("api/PersonalProfile", profile);
+                Console.WriteLine(response);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error: {ex.Message}");
+            }
         }
     }
 }
+

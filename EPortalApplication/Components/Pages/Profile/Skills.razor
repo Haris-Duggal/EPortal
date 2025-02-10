@@ -11,8 +11,8 @@
 		@foreach (var skill in Teachingskills)
 		{
 			<tr>
-				<td>@skill.Skill</td>
-				<td>Taeching</td>
+				<td>@skill.SkillName</td>
+				<td>Teaching</td>
 				<td>@skill.TimeDuration</td>
 			</tr>
 		}
@@ -21,25 +21,22 @@
 			@foreach (var skill in Developmentskills)
 			{
 				<tr>
-					<td>@skill.Skill</td>
+					<td>@skill.SkillName</td>
 					<td>Development</td>
 					<td>@skill.TimeDuration</td>
 				</tr>
 			}
 		}
-		
 	</table>
 }
 
-
 @code {
-
 	[Parameter] public string? id { get; set; }
-	private List<SkillModel>? Teachingskills;
-	private List<SkillModel>? Developmentskills;
+	private List<SkillDTO>? Teachingskills;
+	private List<SkillDTO>? Developmentskills;
 	protected override async Task OnInitializedAsync()
 	{
-		Teachingskills = await skillsService.GetTeachingSkillsByIdAsync(id);
-		Developmentskills = await skillsService.GetDevelopmentSkillsByIdAsync(id);
+		Teachingskills = await skillsService.GetTeachingSkillsByIdAsync(id!);
+		Developmentskills = await skillsService.GetDevelopmentSkillsByIdAsync(id!);
 	}
 }

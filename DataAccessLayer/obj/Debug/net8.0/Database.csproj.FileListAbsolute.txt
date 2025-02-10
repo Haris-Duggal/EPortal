@@ -13,3 +13,20 @@ C:\Users\Haris Duggal\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Data
 C:\Users\Haris Duggal\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\refint\Database.dll
 C:\Users\Haris Duggal\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.pdb
 C:\Users\Haris Duggal\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\ref\Database.dll
+C:\Users\Haris Duggal\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.sourcelink.json
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\bin\Debug\net8.0\Database.deps.json
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\bin\Debug\net8.0\Database.dll
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\bin\Debug\net8.0\Database.pdb
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\bin\Debug\net8.0\Entities.dll
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\bin\Debug\net8.0\Entities.pdb
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.csproj.AssemblyReference.cache
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.AssemblyInfoInputs.cache
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.AssemblyInfo.cs
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.csproj.CoreCompileInputs.cache
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.sourcelink.json
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.csproj.Up2Date
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.dll
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\refint\Database.dll
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\Database.pdb
+E:\Users\Sajid\source\repos\EPortal\DataAccessLayer\obj\Debug\net8.0\ref\Database.dll

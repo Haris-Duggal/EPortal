@@ -409,10 +409,23 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Education/{eduID}": {
       "put": {
         "tags": [
           "Education"
+        ],
+        "parameters": [
+          {
+            "name": "eduID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -539,26 +552,6 @@
             "description": "OK"
           }
         }
-      },
-      "delete": {
-        "tags": [
-          "Experience"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
       }
     },
     "/api/Experience/{userId}": {
@@ -573,6 +566,29 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Experience/{id}": {
+      "delete": {
+        "tags": [
+          "Experience"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -879,7 +895,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SkillDTO"
+                    "$ref": "#/components/schemas/SkillModel"
                   }
                 }
               },
@@ -887,7 +903,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SkillDTO"
+                    "$ref": "#/components/schemas/SkillModel"
                   }
                 }
               },
@@ -895,50 +911,11 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SkillDTO"
+                    "$ref": "#/components/schemas/SkillModel"
                   }
                 }
               }
             }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "TeachingSkill"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSkillDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSkillDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateSkillDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
           }
         }
       },
@@ -956,6 +933,47 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TeachingSkill/{SkillID}": {
+      "put": {
+        "tags": [
+          "TeachingSkill"
+        ],
+        "parameters": [
+          {
+            "name": "SkillID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SkillModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SkillModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SkillModel"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -1005,6 +1023,10 @@
       "CreateEducationDTO": {
         "type": "object",
         "properties": {
+          "fk_UserID": {
+            "type": "string",
+            "nullable": true
+          },
           "instituteName": {
             "type": "string",
             "nullable": true
@@ -1109,7 +1131,11 @@
             "type": "string",
             "nullable": true
           },
-          "skill": {
+          "skillName": {
+            "type": "string",
+            "nullable": true
+          },
+          "skillType": {
             "type": "string",
             "nullable": true
           },
@@ -1206,7 +1232,33 @@
             "type": "string",
             "nullable": true
           },
-          "skill": {
+          "skillName": {
+            "type": "string",
+            "nullable": true
+          },
+          "skillType": {
+            "type": "string",
+            "nullable": true
+          },
+          "timeDuration": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SkillModel": {
+        "type": "object",
+        "properties": {
+          "skillID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fk_UserID": {
+            "type": "string",
+            "nullable": true
+          },
+          "skillName": {
             "type": "string",
             "nullable": true
           },
@@ -1242,10 +1294,6 @@
       "UpdateEducationDTO": {
         "type": "object",
         "properties": {
-          "educationID": {
-            "type": "integer",
-            "format": "int32"
-          },
           "instituteName": {
             "type": "string",
             "nullable": true
@@ -1354,7 +1402,7 @@
             "type": "string",
             "nullable": true
           },
-          "skill": {
+          "skillName": {
             "type": "string",
             "nullable": true
           },

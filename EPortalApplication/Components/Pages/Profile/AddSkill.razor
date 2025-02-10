@@ -12,7 +12,7 @@
 
 		@if (SelectedSkillType == "Teaching")
 		{
-			<select id="Skill" class="form-control" @bind="Skill.Skill">
+			<select id="Skill" class="form-control" @bind="Skill.SkillName">
 				<option value="">Select Skill</option>
 				@foreach (var skill in TeachingSkills!)
 				{
@@ -22,7 +22,7 @@
 		}
 		else if (SelectedSkillType == "Development")
 		{
-			<select id="Skill" class="form-control" @bind="Skill.Skill">
+			<select id="Skill" class="form-control" @bind="Skill.SkillName">
 				<option value="">Select Skill</option>
 				@foreach (var skill in DevelopmentSkills!)
 				{
@@ -43,7 +43,7 @@
 </EditForm>
 
 @code {
-	private SkillModel Skill = new SkillModel();
+	private CreateSkillDTO Skill = new CreateSkillDTO();
 	private string? SelectedSkillType { get; set; }
 	private List<string>? TeachingSkills { get; set; }
 	private List<string>? DevelopmentSkills { get; set; }

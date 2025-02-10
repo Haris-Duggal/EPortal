@@ -1,0 +1,46 @@
+﻿@inject ExperienceService ExperienceService
+@rendermode InteractiveServer
+
+<EditForm Model="@UpdateModel" OnValidSubmit="EditExperiencee">
+	<input type="text" class="form-control" id="Title" placeholder="Enter Title" @bind-value="@UpdateModel.Title">
+	
+	<select class=" form-control" @bind="UpdateModel.EmploymentType">
+		<option value="EmploymentType">Employment Type</option>
+		<option value="Full Time">Full Time</option>
+		<option value="Part Time">Part Time</option>
+		<option value="Internship">Internship</option>
+		<option value="Contract">Contract</option>
+		<option value="FreeLance">FreeLance</option>
+	</select>
+
+	<input type="text" class="form-control" placeholder="Company" @bind-value="UpdateModel.CompanyName" />
+	<InputCheckbox @bind-Value="UpdateModel.CurrentlyWorking" />
+
+	<input type="date" class="form-control" placeholder="mm/dd/yy" @bind="UpdateModel.StartDate" />
+	<input type="date" class="form-control" placeholder="mm/dd/yy" @bind="UpdateModel.EndDate" />
+
+	<input type="text" class="form-control" placeholder="Location" @bind-value="UpdateModel.Location" />
+
+	<select class="form-control" @bind="UpdateModel.LocationType">
+		<option value="LocationType">Location Type</option>
+		<option value="Remote">Remote</option>
+		<option value="Onsite">Onsite</option>
+		<option value="Hybrid">Hybrid</option>
+	</select>
+
+	<textarea class="form-control" placeholder="Description" @bind="UpdateModel.Description"></textarea>
+	<button type="submit"class="btn btn-primary">Submit</button>
+
+
+</EditForm>
+
+@code {
+	[Parameter] public ExperienceModel? UpdateModel { get; set; }
+	[Parameter] public EventCallback ChangeState { get; set; }
+	
+	private async void EditExperiencee()
+	{
+		await ExperienceService.UpdateExperience(UpdateModel);
+		await ChangeState.InvokeAsync();
+	}
+}

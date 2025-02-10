@@ -79,7 +79,7 @@ namespace EPortal.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveExperience(int id)
         {
             try

@@ -1,33 +1,79 @@
-﻿using Entities.Models;
+﻿using Entities.DTOs;
+using Entities.Models;
 
-namespace EPortalApplication.Services
+public class ExperienceService
 {
-    public class ExperienceService
+    private readonly HttpClient? _httpClient;
+
+    public ExperienceService(IHttpClientFactory httpClientFactory)
     {
-        HttpClient? _httpClient;
-        public ExperienceService(IHttpClientFactory httpClientFactory)
+        _httpClient = httpClientFactory.CreateClient("API");
+    }
+
+    public async Task<List<ExperienceDTO>> GetExperienceAsync()
+    {
+        try
         {
-            _httpClient = httpClientFactory.CreateClient("API");
+            var response = await _httpClient.GetFromJsonAsync<List<ExperienceDTO>>("api/Experience");
+            return response ?? new List<ExperienceDTO>();
         }
-        public async Task<List<ExperienceModel>> GetExperienceAsync()
+        catch (Exception ex)
         {
-            var response = await _httpClient.GetFromJsonAsync<List<ExperienceModel>>("api/Experience");
-            return response ?? new List<ExperienceModel>();
+            Console.Error.WriteLine($"Error: {ex.Message}");
+            return new List<ExperienceDTO>();
         }
-        public async Task<List<ExperienceModel>> GetExperienceByIdAsync(string uid)
+    }
+
+    public async Task<List<ExperienceModel>> GetExperienceByIdAsync(string uid)
+    {
+        try
         {
             var response = await _httpClient.GetFromJsonAsync<List<ExperienceModel>>($"api/Experience/{uid}");
             return response ?? new List<ExperienceModel>();
         }
-        public async Task DeleteExperience(string uid)
+        catch (Exception ex)
         {
-            var IsTrue = await _httpClient.DeleteAsync($"api/Experience/{uid}");
-            Console.WriteLine(IsTrue);
+            Console.Error.WriteLine($"Error: {ex.Message}");
+            return new List<ExperienceModel>();
         }
-        public async Task CreateExperience(ExperienceModel experience)
+    }
+
+    public async Task DeleteExperience(int uid)
+    {
+        try
+        {
+            var response = await _httpClient.DeleteAsync($"api/Experience/{uid}");
+            Console.WriteLine(response);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    public async Task CreateExperience(CreateExperienceDTO experience)
+    {
+        try
         {
             var response = await _httpClient.PostAsJsonAsync("api/Experience", experience);
             Console.WriteLine(response);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    public async Task UpdateExperience(ExperienceModel experience)
+    {
+        try
+        {
+            var response = await _httpClient.PutAsJsonAsync($"api/Experience/{experience.ExperienceID}", experience);
+            Console.WriteLine(response);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
         }
     }
 }

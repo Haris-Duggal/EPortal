@@ -42,4 +42,3 @@ namespace Entities.DTOs
         public string? Description { get; set; }
     }
 }
-

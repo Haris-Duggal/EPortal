@@ -1,68 +1,77 @@
-﻿using Entities.Models;
+﻿using Entities.DTOs;
+using Entities.Models;
 
-namespace EPortalApplication.Services
+public class SkillsService
 {
-    public class SkillsService
+    private readonly HttpClient? _httpClient;
+
+    public SkillsService(IHttpClientFactory httpClientFactory)
     {
-        private readonly HttpClient _httpClient;
+        _httpClient = httpClientFactory.CreateClient("API");
+    }
 
-        public SkillsService(IHttpClientFactory httpClientFactory)
+    public async Task<List<SkillDTO>> GetTeachingSkillsByIdAsync(string uid)
+    {
+        try
         {
-            _httpClient = httpClientFactory.CreateClient("API");
+            var response = await _httpClient!.GetFromJsonAsync<List<SkillDTO>>($"api/TeachingSkill/{uid}");
+            return response ?? new List<SkillDTO>();
         }
-
-        public async Task<List<SkillModel>> GetTeachingSkillsAsync()
+        catch (Exception ex)
         {
-            var response = await _httpClient.GetFromJsonAsync<List<SkillModel>>("api/TeachingSkill");
-            return response ?? new List<SkillModel>();
+            Console.Error.WriteLine($"Error: {ex.Message}");
+            return new List<SkillDTO>();
         }
+    }
 
-        public async Task<List<SkillModel>> GetTeachingSkillsByIdAsync(string uid)
+    public async Task<List<SkillDTO>> GetDevelopmentSkillsByIdAsync(string uid)
+    {
+        try
         {
-            var response = await _httpClient.GetFromJsonAsync<List<SkillModel>>($"api/TeachingSkill/{uid}");
-            return response ?? new List<SkillModel>();
+            var response = await _httpClient!.GetFromJsonAsync<List<SkillDTO>>($"api/DevelopmentSkill/{uid}");
+            return response ?? new List<SkillDTO>();
         }
-
-        public async Task DeleteTeachingSkill(string uid)
+        catch (Exception ex)
         {
-            await _httpClient.DeleteAsync($"api/TeachingSkill/{uid}");
+            Console.Error.WriteLine($"Error: {ex.Message}");
+            return new List<SkillDTO>();
         }
+    }
 
-        public async Task CreateTeachingSkill(SkillModel skill)
+    public async Task CreateTeachingSkill(CreateSkillDTO skill)
+    {
+        try
         {
-            await _httpClient.PostAsJsonAsync("api/TeachingSkill", skill);
+            var response = await _httpClient!.PostAsJsonAsync("api/TeachingSkill", skill);
+            Console.WriteLine(response);
         }
-
-        public async Task UpdateTeachingSkill(SkillModel skill, string uid)
+        catch (Exception ex)
         {
-            await _httpClient.PutAsJsonAsync($"api/TeachingSkill/{uid}", skill);
+            Console.Error.WriteLine($"Error: {ex.Message}");
         }
+    }
 
-        public async Task<List<SkillModel>> GetDevelopmentSkillsAsync()
+    public async Task CreateDevelopmentSkill(CreateSkillDTO skill)
+    {
+        try
         {
-            var response = await _httpClient.GetFromJsonAsync<List<SkillModel>>("api/DevelopmentSkill");
-            return response ?? new List<SkillModel>();
+            var response = await _httpClient!.PostAsJsonAsync("api/DevelopmentSkill", skill);
+            Console.WriteLine(response);
         }
-
-        public async Task<List<SkillModel>> GetDevelopmentSkillsByIdAsync(string uid)
+        catch (Exception ex)
         {
-            var response = await _httpClient.GetFromJsonAsync<List<SkillModel>>($"api/DevelopmentSkill/{uid}");
-            return response ?? new List<SkillModel>();
+            Console.Error.WriteLine($"Error: {ex.Message}");
         }
-
-        public async Task DeleteDevelopmentSkill(string uid)
+    }
+    public async Task UpdateTeachingSkill(SkillModel skill)
+    {
+        try
         {
-            await _httpClient.DeleteAsync($"api/DevelopmentSkill/{uid}");
+            await _httpClient!.PutAsJsonAsync($"api/TeachingSkill/{skill.SkillID}", skill);
         }
-
-        public async Task CreateDevelopmentSkill(SkillModel skill)
+        catch(Exception ex)
         {
-            await _httpClient.PostAsJsonAsync("api/DevelopmentSkill", skill);
-        }
-
-        public async Task UpdateDevelopmentSkill(SkillModel skill, string uid)
-        {
-            await _httpClient.PutAsJsonAsync($"api/DevelopmentSkill/{uid}", skill);
+            Console.Error.WriteLine($"Error: {ex.Message}");
         }
 
     }

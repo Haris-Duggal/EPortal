@@ -59,8 +59,8 @@ namespace EPortalAPI.Controllers
                 var developmentSkillModel = createSkillDTO.ToModel();
                 SqlParameter[] sp =
                 {
-                    new SqlParameter("@fk_UserID", developmentSkillModel.fk_UserID),
-                    new SqlParameter("@SkillName", developmentSkillModel.Skill),
+                    new SqlParameter("@fk_UserID", "911"),
+                    new SqlParameter("@SkillName", developmentSkillModel.SkillName),
                     new SqlParameter("@TimeDuration", developmentSkillModel.TimeDuration)
                 };
                 await _developmentSkillService.CreateDevelopmentSkillModel("SP_Post_DevelopmentSkill", sp);
@@ -81,7 +81,7 @@ namespace EPortalAPI.Controllers
                 SqlParameter[] sp =
                 {
                     new SqlParameter("@fk_UserID", userId),
-                    new SqlParameter("@SkillName", developmentSkillModel.Skill),
+                    new SqlParameter("@SkillName", developmentSkillModel.SkillName),
                     new SqlParameter("@TimeDuration", developmentSkillModel.TimeDuration)
                 };
                 await _developmentSkillService.UpdateDevelopmentSkillModel("SP_Put_DevelopmentSkill", sp);

@@ -10,7 +10,7 @@ namespace Entities.DTOMappers
             return new SkillDTO
             {
                 fk_UserID = model.fk_UserID,
-                Skill = model.Skill,
+                SkillName = model.SkillName,
                 SkillType = model.SkillType,
                 TimeDuration = model.TimeDuration
             };
@@ -21,7 +21,8 @@ namespace Entities.DTOMappers
             return new SkillModel
             {
                 fk_UserID = dto.fk_UserID,
-                Skill = dto.Skill,
+                SkillName = dto.SkillName,
+                SkillType = dto.SkillType,
                 TimeDuration = dto.TimeDuration
             };
         }
@@ -31,7 +32,7 @@ namespace Entities.DTOMappers
             return new SkillModel
             {
                 fk_UserID = dto.fk_UserID,
-                Skill = dto.Skill,
+                SkillName = dto.SkillName,
                 TimeDuration = dto.TimeDuration
             };
         }

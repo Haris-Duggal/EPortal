@@ -1,44 +1,99 @@
 ﻿@inject ExperienceService ExperienceService
+@rendermode InteractiveServer
 
-@if (ExperienceModels != null)
+@if (ExperienceModels != null && ExperienceModels.Any())
 {
-	<table class="table table-bordered">
-		<tr>
-			<th>Title</th>
-			<th>Employement Type</th>
-			<th>Company Name</th>
-			<th>Currently Working</th>
-			<th>Start Date</th>
-			<th>End Date</th>
-			<th>Location</th>
-			<th>Location type</th>
-			<th>Description</th>
-		</tr>
-		@foreach (var ExperienceModel in ExperienceModels)
-		{
-			<tr>
-				<td>@ExperienceModel.Title</td>
-				<td>@ExperienceModel.EmploymentType</td>
-				<td>@ExperienceModel.CompanyName</td>
-				<td>@ExperienceModel.CurrentlyWorking</td>
-				<td>@ExperienceModel.StartDate</td>
-				<td>@ExperienceModel.EndDate</td>
-				<td>@ExperienceModel.Location</td>
-				<td>@ExperienceModel.LocationType</td>
-				<td>@ExperienceModel.Description</td>
 
-			</tr>
-		}
-	</table>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Employment Type</th>
+            <th>Company Name</th>
+            <th>Currently Working</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Location</th>
+            <th>Location Type</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var ExperienceModel in ExperienceModels)
+        {
+            <tr>
+                <td>@ExperienceModel.Title</td>
+                <td>@ExperienceModel.EmploymentType</td>
+                <td>@ExperienceModel.CompanyName</td>
+                <td>@ExperienceModel.CurrentlyWorking</td>
+                <td>@ExperienceModel.StartDate</td>
+                <td>@ExperienceModel.EndDate</td>
+                <td>@ExperienceModel.Location</td>
+                <td>@ExperienceModel.LocationType</td>
+                <td>@ExperienceModel.Description</td>
+                <td>
+                    <button class="btn btn-primary" @onclick="() => EditExperience(ExperienceModel.ExperienceID)">Edit</button>
+                    <button class="btn btn-danger" @onclick="() => ShowDeleteModal(ExperienceModel.ExperienceID)">Delete</button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    @if (isEditFormVisible)
+    {
+        <EditExperience UpdateModel="selectedModel" ChangeState="HideEditForm" />
+    }
+
+    <DeleteModal Title="Delete Experience"
+                 Message="Are you sure you want to delete this experience record?"
+                 IsVisible="@isDeleteModalVisible"
+                 OnConfirm="DeleteExperience"
+                 OnCancel="HideDeleteModal" />
 }
 
 @code {
-	[Parameter] public string? id { get; set; }
+    [Parameter] public string? id { get; set; }
 
-	private List<ExperienceModel>? ExperienceModels;
+    private List<ExperienceModel>? ExperienceModels;
+    private ExperienceModel selectedModel = new ExperienceModel();
+    private bool isEditFormVisible = false;
+    private bool isDeleteModalVisible = false;
+    private int SelectedIDtoDelete { get; set; }
 
-	protected override async Task OnInitializedAsync()
-	{
-		ExperienceModels = await ExperienceService.GetExperienceByIdAsync(id);
-	}
+    protected override async Task OnInitializedAsync()
+    {
+        ExperienceModels = await ExperienceService.GetExperienceByIdAsync(id!);
+    }
+
+    private void EditExperience(int id)
+    {
+        isEditFormVisible = true;
+        selectedModel = ExperienceModels.FirstOrDefault(x => x.ExperienceID == id)!;
+        StateHasChanged();
+    }
+
+    private void HideEditForm()
+    {
+        isEditFormVisible = false;
+    }
+
+    private void ShowDeleteModal(int id)
+    {
+        SelectedIDtoDelete = id;
+        isDeleteModalVisible = true;
+    }
+
+    private async Task DeleteExperience()
+    {
+        await ExperienceService.DeleteExperience(SelectedIDtoDelete);
+        ExperienceModels = await ExperienceService.GetExperienceByIdAsync(id!);
+        isDeleteModalVisible = false;
+    }
+
+    private void HideDeleteModal()
+    {
+        isDeleteModalVisible = false;
+    }
 }
