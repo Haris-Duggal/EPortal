@@ -42,7 +42,7 @@ namespace EPortalAPI.Controllers
                     new SqlParameter("@fk_UserID", userId)
                 };
                 var result = await _teachingSkillService.GetTeachingSkillModel("SP_Get_TeachingSkillsById", sp);
-                return Ok(result.Select(static model => model.ToDTO()).ToList());
+                return Ok(result);
             }
             catch (Exception ex)
             {
@@ -92,14 +92,14 @@ namespace EPortalAPI.Controllers
             }
         }
 
-        [HttpDelete("{userId}")]
-        public async Task<ActionResult> DeleteTeachingSkillModel(string userId)
+        [HttpDelete("{Id}")]
+        public async Task<ActionResult> DeleteTeachingSkillModel(int Id)
         {
             try
             {
                 SqlParameter[] sp =
                 {
-                    new SqlParameter("@fk_UserID", userId)
+                    new SqlParameter("@SkillID", Id)
                 };
                 await _teachingSkillService.DeleteTeachingSkillModel("SP_Delete_TeachingSkill", sp);
                 return Ok();

@@ -1,5 +1,6 @@
 ﻿using Entities.DTOs;
 using Entities.Models;
+using EPortalApplication.Components.Pages.Profile;
 
 public class SkillsService
 {
@@ -10,31 +11,31 @@ public class SkillsService
         _httpClient = httpClientFactory.CreateClient("API");
     }
 
-    public async Task<List<SkillDTO>> GetTeachingSkillsByIdAsync(string uid)
+    public async Task<List<SkillModel>> GetTeachingSkillsByIdAsync(string uid)
     {
         try
         {
-            var response = await _httpClient!.GetFromJsonAsync<List<SkillDTO>>($"api/TeachingSkill/{uid}");
-            return response ?? new List<SkillDTO>();
+            var response = await _httpClient!.GetFromJsonAsync<List<SkillModel>>($"api/TeachingSkill/{uid}");
+            return response ?? new List<SkillModel>();
         }
         catch (Exception ex)
         {
             Console.Error.WriteLine($"Error: {ex.Message}");
-            return new List<SkillDTO>();
+            return new List<SkillModel>();
         }
     }
 
-    public async Task<List<SkillDTO>> GetDevelopmentSkillsByIdAsync(string uid)
+    public async Task<List<SkillModel>> GetDevelopmentSkillsByIdAsync(string uid)
     {
         try
         {
-            var response = await _httpClient!.GetFromJsonAsync<List<SkillDTO>>($"api/DevelopmentSkill/{uid}");
-            return response ?? new List<SkillDTO>();
+            var response = await _httpClient!.GetFromJsonAsync<List<SkillModel>>($"api/DevelopmentSkill/{uid}");
+            return response ?? new List<SkillModel>();
         }
         catch (Exception ex)
         {
             Console.Error.WriteLine($"Error: {ex.Message}");
-            return new List<SkillDTO>();
+            return new List<SkillModel>();
         }
     }
 
@@ -74,5 +75,41 @@ public class SkillsService
             Console.Error.WriteLine($"Error: {ex.Message}");
         }
 
+    }
+
+    public async Task UpdateDevelopmentSkill(SkillModel skill)
+    {
+        try
+        {
+            await _httpClient!.PutAsJsonAsync($"api/DevelopmentSkill/{skill.SkillID}", skill);
+        }
+        catch( Exception ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    public async Task DeleteTeachingSkill(int id)
+    {
+        try
+        {
+            await _httpClient!.DeleteAsync($"api/DevelopmentSkill/{id}");
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    public async Task DeleteDevelopmentSkill(int id)
+    {
+        try
+        {
+            await _httpClient!.DeleteAsync($"api/DevelopmentSkill/{id}");
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error: {ex.Message}");
+        }
     }
 }

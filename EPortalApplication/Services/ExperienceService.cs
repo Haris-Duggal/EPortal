@@ -14,7 +14,7 @@ public class ExperienceService
     {
         try
         {
-            var response = await _httpClient.GetFromJsonAsync<List<ExperienceDTO>>("api/Experience");
+            var response = await _httpClient!.GetFromJsonAsync<List<ExperienceDTO>>("api/Experience");
             return response ?? new List<ExperienceDTO>();
         }
         catch (Exception ex)
@@ -28,7 +28,7 @@ public class ExperienceService
     {
         try
         {
-            var response = await _httpClient.GetFromJsonAsync<List<ExperienceModel>>($"api/Experience/{uid}");
+            var response = await _httpClient!.GetFromJsonAsync<List<ExperienceModel>>($"api/Experience/{uid}");
             return response ?? new List<ExperienceModel>();
         }
         catch (Exception ex)
@@ -42,7 +42,7 @@ public class ExperienceService
     {
         try
         {
-            var response = await _httpClient.DeleteAsync($"api/Experience/{uid}");
+            var response = await _httpClient!.DeleteAsync($"api/Experience/{uid}");
             Console.WriteLine(response);
         }
         catch (Exception ex)
@@ -55,7 +55,7 @@ public class ExperienceService
     {
         try
         {
-            var response = await _httpClient.PostAsJsonAsync("api/Experience", experience);
+            var response = await _httpClient!.PostAsJsonAsync("api/Experience", experience);
             Console.WriteLine(response);
         }
         catch (Exception ex)
@@ -68,7 +68,7 @@ public class ExperienceService
     {
         try
         {
-            var response = await _httpClient.PutAsJsonAsync($"api/Experience/{experience.ExperienceID}", experience);
+            var response = await _httpClient!.PutAsJsonAsync($"api/Experience/{experience.ExperienceID}", experience);
             Console.WriteLine(response);
         }
         catch (Exception ex)

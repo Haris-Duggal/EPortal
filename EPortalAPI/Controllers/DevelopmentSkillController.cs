@@ -5,6 +5,7 @@ using EPortalAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Entities.Models;
 
 namespace EPortalAPI.Controllers
 {
@@ -34,7 +35,7 @@ namespace EPortalAPI.Controllers
         }
 
         [HttpGet("{userId}")]
-        public async Task<ActionResult<List<SkillDTO>>> GetDevelopmentSkillModel(string userId)
+        public async Task<ActionResult<List<SkillModel>>> GetDevelopmentSkillModel(string userId)
         {
             try
             {
@@ -43,7 +44,7 @@ namespace EPortalAPI.Controllers
                     new SqlParameter("@fk_UserID", userId)
                 };
                 var result = await _developmentSkillService.GetDevelopmentSkillModel("SP_Get_DevelopmentSkillsById", sp);
-                return Ok(result.Select(static model => model.ToDTO()).ToList());
+                return Ok(result);
             }
             catch (Exception ex)
             {
@@ -93,14 +94,14 @@ namespace EPortalAPI.Controllers
             }
         }
 
-        [HttpDelete("{userId}")]
-        public async Task<ActionResult> DeleteDevelopmentSkillModel(string userId)
+        [HttpDelete("{Id}")]
+        public async Task<ActionResult> DeleteDevelopmentSkillModel(int Id)
         {
             try
             {
                 SqlParameter[] sp =
                 {
-                    new SqlParameter("@fk_UserID", userId)
+                    new SqlParameter("@SkillID", Id)
                 };
                 await _developmentSkillService.DeleteDevelopmentSkillModel("SP_Delete_DevelopmentSkill", sp);
                 return Ok();

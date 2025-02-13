@@ -3,40 +3,129 @@
 @if (Teachingskills != null)
 {
 	<table class="table table-bordered">
-		<tr>
-			<th>Skill</th>
-			<th>Skill Type</th>
-			<th>Time Duration</th>
-		</tr>
-		@foreach (var skill in Teachingskills)
-		{
+		<thead>
 			<tr>
-				<td>@skill.SkillName</td>
-				<td>Teaching</td>
-				<td>@skill.TimeDuration</td>
+				<th>Skill</th>
+				<th>Skill Type</th>
+				<th>Time Duration</th>
 			</tr>
-		}
-		@if (Developmentskills != null)
-		{
-			@foreach (var skill in Developmentskills)
+		</thead>
+		<tbody>
+			@foreach (var skill in Teachingskills)
 			{
 				<tr>
 					<td>@skill.SkillName</td>
-					<td>Development</td>
+					<td>Teaching</td>
 					<td>@skill.TimeDuration</td>
+					<td>
+						<button class="btn btn-primary btn-sm" @onclick="() => EditTeachingSkill(skill)">Edit</button>
+						<button class="btn btn-danger btn-sm" @onclick="() => ShowDeleteTeachingModal(skill.SkillID)">Delete</button>
+					</td>
 				</tr>
 			}
-		}
+			@if (Developmentskills != null)
+			{
+				@foreach (var skill in Developmentskills)
+				{
+					<tr>
+						<td>@skill.SkillName</td>
+						<td>Development</td>
+						<td>@skill.TimeDuration</td>
+						<td>
+							<button class="btn btn-primary btn-sm" @onclick="() => EditDevelopmentSkill(skill)">Edit</button>
+							<button class="btn btn-danger btn-sm" @onclick="() => ShowDeleteDevelopmentModal(skill.SkillID)">Delete</button>
+						</td>
+					</tr>
+				}
+			}
+		</tbody>
 	</table>
+
+	@if (isEditFormVisible)
+	{
+		<EditSkill UpdateModel="selectedModel" ChangeState="HideEditForm" ></EditSkill>
+	}
+
+	<DeleteModal Title="Delete Skill"
+				Message="Are you sure you want to delete this Skill record?"
+				IsVisible="@isDeleteTeachingModalVisible"
+				OnConfirm="DeleteTeachingSkill"
+				OnCancel="HideDeleteModal" />
+
+	<DeleteModal Title="Delete Skill"
+				 Message="Are you sure you want to delete this Skill record?"
+				 IsVisible="@isDeleteDevelopmentModalVisible"
+				 OnConfirm="DeleteDevelopmentSkill"
+				 OnCancel="HideDeleteModal" />
 }
 
 @code {
 	[Parameter] public string? id { get; set; }
-	private List<SkillDTO>? Teachingskills;
-	private List<SkillDTO>? Developmentskills;
+	private List<SkillModel>? Teachingskills;
+	private List<SkillModel>? Developmentskills;
+	private SkillModel selectedModel = new SkillModel();
+	bool isEditFormVisible = false;
+	bool isDeleteTeachingModalVisible = false;
+	bool isDeleteDevelopmentModalVisible = false;
+	private int SelectedIDtoDelete { get; set; }
+	private string? SkillTypeToDelete { get; set; }
+
 	protected override async Task OnInitializedAsync()
 	{
 		Teachingskills = await skillsService.GetTeachingSkillsByIdAsync(id!);
 		Developmentskills = await skillsService.GetDevelopmentSkillsByIdAsync(id!);
+	}
+
+	private void EditTeachingSkill(SkillModel skill)
+	{
+		isEditFormVisible = true;
+		selectedModel = skill;
+		StateHasChanged();
+	}
+
+	private void EditDevelopmentSkill(SkillModel skill)
+	{
+		isEditFormVisible = true;
+		selectedModel = skill;
+		StateHasChanged();
+	}
+
+	private void HideEditForm()
+	{
+		isEditFormVisible = false;
+	}
+
+	private void ShowDeleteTeachingModal(int id)
+	{
+		SelectedIDtoDelete = id;
+		isDeleteTeachingModalVisible = true;
+	}
+	
+	private void ShowDeleteDevelopmentModal(int id)
+	{
+		SelectedIDtoDelete = id;
+		isDeleteDevelopmentModalVisible = true;
+	}
+
+	private async Task DeleteTeachingSkill()
+	{
+		await skillsService.DeleteTeachingSkill(SelectedIDtoDelete);
+		Teachingskills = await skillsService.GetTeachingSkillsByIdAsync(id!);
+		Developmentskills = await skillsService.GetDevelopmentSkillsByIdAsync(id!);
+		isDeleteTeachingModalVisible = false;
+	}
+
+	private async Task DeleteDevelopmentSkill()
+	{
+		await skillsService.DeleteTeachingSkill(SelectedIDtoDelete);
+		Teachingskills = await skillsService.GetTeachingSkillsByIdAsync(id!);
+		Developmentskills = await skillsService.GetDevelopmentSkillsByIdAsync(id!);
+		isDeleteDevelopmentModalVisible = false;
+	}
+
+	private void HideDeleteModal()
+	{
+		isDeleteTeachingModalVisible = false;
+		isDeleteDevelopmentModalVisible = false;
 	}
 }

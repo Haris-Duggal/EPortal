@@ -136,6 +136,22 @@
   },
   {
     "ContainingType": "EPortalAPI.Controllers.DevelopmentSkillController",
+    "Method": "DeleteDevelopmentSkillModel",
+    "RelativePath": "api/DevelopmentSkill/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EPortalAPI.Controllers.DevelopmentSkillController",
     "Method": "GetDevelopmentSkillModel",
     "RelativePath": "api/DevelopmentSkill/{userId}",
     "HttpMethod": "GET",
@@ -150,7 +166,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Entities.DTOs.SkillDTO, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.SkillModel, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -173,22 +189,6 @@
         "Type": "Entities.DTOs.UpdateSkillDTO",
         "IsRequired": true
       },
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EPortalAPI.Controllers.DevelopmentSkillController",
-    "Method": "DeleteDevelopmentSkillModel",
-    "RelativePath": "api/DevelopmentSkill/{userId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
       {
         "Name": "userId",
         "Type": "System.String",
@@ -512,6 +512,22 @@
   },
   {
     "ContainingType": "EPortalAPI.Controllers.TeachingSkillController",
+    "Method": "DeleteTeachingSkillModel",
+    "RelativePath": "api/TeachingSkill/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EPortalAPI.Controllers.TeachingSkillController",
     "Method": "UpdateTeachingSkillModel",
     "RelativePath": "api/TeachingSkill/{SkillID}",
     "HttpMethod": "PUT",
@@ -556,21 +572,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "EPortalAPI.Controllers.TeachingSkillController",
-    "Method": "DeleteTeachingSkillModel",
-    "RelativePath": "api/TeachingSkill/{userId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   }
 ]

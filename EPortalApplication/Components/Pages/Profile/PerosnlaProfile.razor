@@ -160,7 +160,7 @@ else if (personalProfile != null)
         try
         {
             personalProfile = await profileservice.GetProfileByIdAsync(id!);
-            educationModels = await educationService.GetEducationByIdAsync(id);
+            educationModels = await educationService.GetEducationByIdAsync(id!);
         }
         catch (Exception ex)
         {

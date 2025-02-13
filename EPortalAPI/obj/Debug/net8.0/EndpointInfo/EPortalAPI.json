@@ -260,7 +260,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SkillDTO"
+                    "$ref": "#/components/schemas/SkillModel"
                   }
                 }
               },
@@ -268,7 +268,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SkillDTO"
+                    "$ref": "#/components/schemas/SkillModel"
                   }
                 }
               },
@@ -276,7 +276,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/SkillDTO"
+                    "$ref": "#/components/schemas/SkillModel"
                   }
                 }
               }
@@ -322,18 +322,21 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/DevelopmentSkill/{Id}": {
       "delete": {
         "tags": [
           "DevelopmentSkill"
         ],
         "parameters": [
           {
-            "name": "userId",
+            "name": "Id",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -918,26 +921,6 @@
             }
           }
         }
-      },
-      "delete": {
-        "tags": [
-          "TeachingSkill"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
       }
     },
     "/api/TeachingSkill/{SkillID}": {
@@ -974,6 +957,29 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TeachingSkill/{Id}": {
+      "delete": {
+        "tags": [
+          "TeachingSkill"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
