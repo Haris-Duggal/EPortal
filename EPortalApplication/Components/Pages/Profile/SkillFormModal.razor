@@ -1,0 +1,115 @@
+﻿@inject SkillsService skillService
+@inject JsonService jsonService
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Components.Forms
+
+@if (isVisible)
+{
+    <div class="modal fade show d-block" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Skill Form</h5>
+                    <button type="button" class="btn-close" @onclick="HideModal"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="@SkillData" OnValidSubmit="SaveSkill">
+                        <DataAnnotationsValidator />
+                        
+
+                        <div class="mb-3">
+                            <label>Skill Type</label>
+                            <select class="form-control" @bind="SkillData.SkillType" @bind:event="onchange">
+                                <option value="">Select Type</option>
+                                <option value="Teaching">Teaching</option>
+                                <option value="Development">Development</option>
+                            </select>
+                            <ValidationMessage For="@(() => SkillData.SkillType)" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Skill Name</label>
+                            <select class="form-control" @bind="SkillData.SkillName">
+                                <option value="">Select Skill</option>
+                                @if (SkillData.SkillType == "Teaching")
+                                {
+                                    @foreach (var skill in TeachingSkills)
+                                    {
+                                        <option value="@skill">@skill</option>
+                                    }
+                                }
+                                else if (SkillData.SkillType == "Development")
+                                {
+                                    @foreach (var skill in DevelopmentSkills)
+                                    {
+                                        <option value="@skill">@skill</option>
+                                    }
+                                }
+                            </select>
+                            <ValidationMessage For="@(() => SkillData.SkillName)" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Time Duration (Years)</label>
+                            <input type="text" class="form-control" @bind="SkillData.TimeDuration" />
+                            <ValidationMessage For="@(() => SkillData.TimeDuration)" />
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary" @onclick="HideModal">Cancel</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
+@code {
+    [Parameter] public SkillModel SkillData { get; set; } = new SkillModel();
+    [Parameter] public EventCallback ChangeState { get; set; }
+
+    private bool isVisible = false;
+    private List<string>? TeachingSkills { get; set; }
+    private List<string>? DevelopmentSkills { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TeachingSkills = jsonService.ReadTeachingSkillsFromJson();
+        DevelopmentSkills = jsonService.ReadDevelopmentSkillsFromJson();
+    }
+
+    public void ShowModal()
+    {
+        isVisible = true;
+    }
+
+    private void HideModal()
+    {
+        isVisible = false;
+    }
+
+    private async Task SaveSkill()
+    {
+        if (SkillData.SkillID == 0)
+        {
+            if (SkillData.SkillType == "Teaching")
+            {
+                await skillService.CreateTeachingSkill(SkillData);
+            }
+            else if (SkillData.SkillType == "Development")
+            {
+                await skillService.CreateDevelopmentSkill(SkillData);
+            }
+        }
+        else
+        {
+            await skillService.UpdateTeachingSkill(SkillData);
+        }
+
+        await ChangeState.InvokeAsync();
+        HideModal();
+    }
+}

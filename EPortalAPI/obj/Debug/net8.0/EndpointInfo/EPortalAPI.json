@@ -93,17 +93,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContactInfoDTO"
+                  "$ref": "#/components/schemas/ContactInfoModel"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContactInfoDTO"
+                  "$ref": "#/components/schemas/ContactInfoModel"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContactInfoDTO"
+                  "$ref": "#/components/schemas/ContactInfoModel"
                 }
               }
             }
@@ -1008,6 +1008,41 @@
         },
         "additionalProperties": false
       },
+      "ContactInfoModel": {
+        "required": [
+          "email",
+          "location",
+          "phoneNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "fk_UserID": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "area": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateContactInfoDTO": {
         "type": "object",
         "properties": {
@@ -1254,6 +1289,11 @@
         "additionalProperties": false
       },
       "SkillModel": {
+        "required": [
+          "skillName",
+          "skillType",
+          "timeDuration"
+        ],
         "type": "object",
         "properties": {
           "skillID": {
@@ -1265,16 +1305,17 @@
             "nullable": true
           },
           "skillName": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "skillType": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "timeDuration": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^\\d+$",
+            "type": "string"
           }
         },
         "additionalProperties": false

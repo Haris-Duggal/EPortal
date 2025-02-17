@@ -1,35 +1,35 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
       "PackagePath": "staticwebassets\\EPortalApplication.wz5j36h8ju.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
       "PackagePath": "staticwebassets\\data\\DevelopmentSkills.json"
     },
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
       "PackagePath": "staticwebassets\\data\\TeachingSkills.json"
     },
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
       "PackagePath": "staticwebassets\\data\\degrees.json"
     },
     {
-      "Id": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "Id": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {

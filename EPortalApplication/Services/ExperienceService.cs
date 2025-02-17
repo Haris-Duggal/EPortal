@@ -51,7 +51,7 @@ public class ExperienceService
         }
     }
 
-    public async Task CreateExperience(CreateExperienceDTO experience)
+    public async Task CreateExperience(ExperienceModel experience)
     {
         try
         {

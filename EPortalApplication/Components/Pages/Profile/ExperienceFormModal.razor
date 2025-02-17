@@ -1,0 +1,120 @@
+﻿@inject ExperienceService experienceService
+@inject JsonService jsonService
+
+@if (IsVisible)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Experience Form</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="@experienceModel" OnValidSubmit="SaveExperience">
+                        <DataAnnotationsValidator />
+                        <div class="d-flex flex-column gap-2">
+                            <InputText class="form-control" placeholder="Enter Title" @bind-value=experienceModel.Title />
+                            <ValidationMessage For="()=>experienceModel.Title" />
+
+                            <select class="form-control" @bind="experienceModel.EmploymentType">
+                                <option value="">Select Employment Type</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Contract">Contract</option>
+                                <option value="Freelance">Freelance</option>
+                            </select>
+                            <ValidationMessage For="()=>experienceModel.EmploymentType" />
+
+                            <InputText class="form-control" placeholder="Enter Company Name" @bind-value=experienceModel.CompanyName />
+                            <ValidationMessage For="()=>experienceModel.CompanyName" />
+
+                            <InputCheckbox @bind-Value="experienceModel.CurrentlyWorking" /> Currently Working
+                            <ValidationMessage For="()=>experienceModel.CurrentlyWorking" />
+
+                            <input type="date" class="form-control" @bind-value=experienceModel.StartDate />
+                            <ValidationMessage For="()=>experienceModel.StartDate" />
+
+                            <input type="date" class="form-control" @bind-value=experienceModel.EndDate />
+                            <ValidationMessage For="()=>experienceModel.EndDate" />
+
+                            <InputText class="form-control" placeholder="Enter Location" @bind-value=experienceModel.Location />
+                            <ValidationMessage For="()=>experienceModel.Location" />
+
+                            <select class="form-control" @bind="experienceModel.LocationType">
+                                <option value="">Select Location Type</option>
+                                <option value="Remote">Remote</option>
+                                <option value="Onsite">Onsite</option>
+                                <option value="Hybrid">Hybrid</option>
+                            </select>
+                            <ValidationMessage For="()=>experienceModel.LocationType" />
+
+                            <textarea class="form-control" placeholder="Enter Description" @bind="experienceModel.Description"></textarea>
+                            <ValidationMessage For="()=>experienceModel.Description" />
+
+                            <button type="submit" class="btn btn-primary">
+                                @(experienceModel.ExperienceID == 0 ? "Add" : "Update")
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public ExperienceModel? ExperienceData { get; set; }
+    [Parameter] public EventCallback ChangeState { get; set; }
+
+    private ExperienceModel experienceModel = new ExperienceModel();
+    private bool IsVisible { get; set; } = false;
+
+    protected override void OnParametersSet()
+    {
+        if (ExperienceData != null)
+        {
+            experienceModel = new ExperienceModel
+                {
+                    ExperienceID = ExperienceData.ExperienceID,
+                    Title = ExperienceData.Title,
+                    EmploymentType = ExperienceData.EmploymentType,
+                    CompanyName = ExperienceData.CompanyName,
+                    CurrentlyWorking = ExperienceData.CurrentlyWorking,
+                    StartDate = ExperienceData.StartDate,
+                    EndDate = ExperienceData.EndDate,
+                    Location = ExperienceData.Location,
+                    LocationType = ExperienceData.LocationType,
+                    Description = ExperienceData.Description
+                };
+        }
+    }
+
+    private async Task SaveExperience()
+    {
+        if (experienceModel.ExperienceID == 0)
+        {
+            await experienceService.CreateExperience(experienceModel);
+        }
+        else
+        {
+            await experienceService.UpdateExperience( experienceModel);
+        }
+
+        await ChangeState.InvokeAsync();
+        CloseModal();
+    }
+
+    public void ShowModal()
+    {
+        IsVisible = true;
+        StateHasChanged();
+    }
+
+    public void CloseModal()
+    {
+        IsVisible = false;
+        StateHasChanged();
+    }
+}

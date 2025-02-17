@@ -39,7 +39,7 @@ public class SkillsService
         }
     }
 
-    public async Task CreateTeachingSkill(CreateSkillDTO skill)
+    public async Task CreateTeachingSkill(SkillModel skill)
     {
         try
         {
@@ -52,7 +52,7 @@ public class SkillsService
         }
     }
 
-    public async Task CreateDevelopmentSkill(CreateSkillDTO skill)
+    public async Task CreateDevelopmentSkill(SkillModel skill)
     {
         try
         {

@@ -1,4 +1,5 @@
 ﻿using Entities.DTOs;
+using Entities.Models;
 using EPortalAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -11,6 +12,9 @@ namespace EPortalAPI.Controllers
     {
         private readonly IContactInfoService _contactInfoService;
 
+        /// <summary>
+        /// </summary>
+        /// <param name="contactInfoService"></param>
         public ContactInfoController(IContactInfoService contactInfoService)
         {
             _contactInfoService = contactInfoService;
@@ -31,7 +35,7 @@ namespace EPortalAPI.Controllers
         }
 
         [HttpGet("{userId}")]
-        public async Task<ActionResult<ContactInfoDTO>> ContactInfoModel(string userId)
+        public async Task<ActionResult<ContactInfoModel>> ContactInfoModel(string userId)
         {
             try
             {
@@ -40,7 +44,7 @@ namespace EPortalAPI.Controllers
                     new SqlParameter("@fk_UserID", userId)
                 };
                 var result = await _contactInfoService.ContactInfoModel("SP_Get_ContactInfoById", sp);
-                return Ok(result.ToDTO());
+                return Ok(result);
             }
             catch (Exception ex)
             {

@@ -1,0 +1,43 @@
+﻿@inject ContactInfoService service
+@rendermode InteractiveServer
+
+<EditForm Model="@contact" OnValidSubmit="EditContact">
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label>Phone Number</label>
+        <InputText @bind-Value="contact.PhoneNumber" class="form-control" placeholder="Enter Phone Number" />
+        <ValidationMessage For="()=> contact.PhoneNumber" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <InputText @bind-Value="contact.Email" class="form-control" placeholder="Enter Email" />
+        <ValidationMessage For="()=> contact.Email" />
+    </div>
+
+    <div class="mb-3">
+        <label>Location</label>
+        <InputText @bind-Value="contact.Location" class="form-control" placeholder="Enter Location" />
+        <ValidationMessage For="()=> contact.Location" />
+    </div>
+
+    <button type="submit" class="btn btn-warning">Update</button>
+    <button type="button" class="btn btn-secondary ms-2" @onclick="HideForm">Cancel</button>
+</EditForm>
+
+@code {
+    [Parameter] public ContactInfoModel contact { get; set; } = new ContactInfoModel();
+    [Parameter] public EventCallback ChangeState { get; set; }
+
+    private async Task EditContact()
+    {
+        await service.EditContactInfo(contact);
+        await ChangeState.InvokeAsync();
+    }
+
+    private async Task HideForm()
+    {
+        await ChangeState.InvokeAsync();
+    }
+}

@@ -1,0 +1,97 @@
+﻿@inject EducationService educationService
+@inject JsonService jsonService
+
+<EditForm Model="@educationModel" OnValidSubmit="SaveEducation">
+	<div class="d-flex justify-content-between">
+		<input type="text" class="form-control" id="InstituteName" placeholder="Enter Institute Name" @bind-value=educationModel.InstituteName>
+
+		<select id="degreeType" class="form-control" @onchange="@SetDegree">
+			<option value="">Select Degree</option>
+			@foreach (var degree in Degrees!)
+			{
+				<option value="@degree.DegreeType">@degree.DegreeType</option>
+			}
+		</select>
+
+		@if (DegreeMajors != null)
+		{
+			<select id="degreeMajor" class="form-control" @bind="educationModel.FieldOfStudy">
+				<option value="">Select Major</option>
+				@foreach (var major in DegreeMajors)
+				{
+					<option value="@major">@major</option>
+				}
+			</select>
+		}
+		else
+		{
+			<select id="degreeMajor" class="form-control">
+				<option value="">Select Major</option>
+			</select>
+		}
+
+		<input type="date" class="form-control" id="StartDate" @bind-value=educationModel.StartDate>
+		<input type="date" class="form-control" id="EndDate" @bind-value=educationModel.EndDate>
+		<input type="text" class="form-control" id="Range" placeholder="Enter Grade" @bind-value=educationModel.Range>
+
+		<button type="submit" class="btn btn-primary">
+			@(educationModel.EducationID == 0 ? "Add" : "Update")
+		</button>
+	</div>
+</EditForm>
+
+@code {
+	[Parameter] public EducationModel? EducationData { get; set; }
+	[Parameter] public EventCallback ChangeState { get; set; }
+
+	private EducationModel educationModel = new EducationModel();
+	private List<Degree>? Degrees { get; set; }
+	private List<string>? DegreeMajors { get; set; }
+
+	protected override void OnInitialized()
+	{
+		Degrees = jsonService.UseJArrayParseInNewtonsoftJson();
+
+		// If EducationData is provided, use it to populate the form for editing
+		if (EducationData != null)
+		{
+			educationModel = new EducationModel
+				{
+					EducationID = EducationData.EducationID,
+					InstituteName = EducationData.InstituteName,
+					Degree = EducationData.Degree,
+					FieldOfStudy = EducationData.FieldOfStudy,
+					StartDate = EducationData.StartDate,
+					EndDate = EducationData.EndDate,
+					Range = EducationData.Range
+				};
+
+			// Set degree major options based on selected degree
+			SetDegree(new ChangeEventArgs { Value = educationModel.Degree });
+		}
+	}
+
+	private void SetDegree(ChangeEventArgs args)
+	{
+		educationModel.Degree = args.Value?.ToString();
+		var degreeObj = Degrees?.Find(d => d.DegreeType == educationModel.Degree);
+		DegreeMajors = degreeObj?.Majors ?? new List<string>();
+		educationModel.FieldOfStudy = string.Empty;
+	}
+
+	private async Task SaveEducation()
+	{
+		if (educationModel.EducationID == 0)
+		{
+			// Create new education entry
+			await educationService.CreateEducation(educationModel);
+		}
+		else
+		{
+			// Update existing entry
+			await educationService.UpdateEducation(educationModel.EducationID, educationModel);
+		}
+
+		await ChangeState.InvokeAsync();
+	}
+}

@@ -1,6 +1,10 @@
 ﻿@inject EducationService educationService
 @rendermode InteractiveServer
 
+<EducationFormModal @ref="educationFormModal" EducationData="educationModel" ChangeState="LoadEducation" />
+
+<button class="btn btn-success mb-3" @onclick="AddNewEducation">Add New Education</button>
+
 @if (isLoading)
 {
     <p>Loading...</p>
@@ -13,62 +17,53 @@ else if (educationModels != null && educationModels.Any())
 {
     <table class="table table-bordered">
         <thead>
-        <tr>
-            <th>Institute Name</th>
-            <th>Degree</th>
-            <th>Field of Study</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Grade</th>
-            <th>Actions</th>
-        </tr>
+            <tr>
+                <th>Institute Name</th>
+                <th>Degree</th>
+                <th>Field of Study</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Grade</th>
+                <th>Actions</th>
+            </tr>
         </thead>
 
         <tbody>
-        @foreach (var educationModel in educationModels)
-        {
-            <tr>
-                <td>@educationModel.InstituteName</td>
-                <td>@educationModel.Degree</td>
-                <td>@educationModel.FieldOfStudy</td>
-                <td>@educationModel.StartDate</td>
-                <td>@educationModel.EndDate</td>
-                <td>@educationModel.Range</td>
-                <td>
-                    <button class="btn btn-primary" @onclick="() => EditEducation(educationModel.EducationID)">Edit</button>
-                    <button class="btn btn-danger" @onclick="() => ShowDeleteModal(educationModel.EducationID)">Delete</button>
-                </td>
-            </tr>
-        }
+            @foreach (var educationModel in educationModels)
+            {
+                <tr>
+                    <td>@educationModel.InstituteName</td>
+                    <td>@educationModel.Degree</td>
+                    <td>@educationModel.FieldOfStudy</td>
+                    <td>@educationModel.StartDate</td>
+                    <td>@educationModel.EndDate</td>
+                    <td>@educationModel.Range</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => EditEducation(educationModel)">Edit</button>
+                        <button class="btn btn-danger" @onclick="() => ShowDeleteModal(educationModel.EducationID)">Delete</button>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
-
-    @if (isEditFormVisible)
-    {
-        <EditEducation educationDTO="educationModel" ChangeState="HideEditForm" />
-    }
-
-    <DeleteModal Title="Delete Education"
-                 Message="Are you sure you want to delete this education record?"
-                 IsVisible="@isDeleteModalVisible"
-                 OnConfirm="DeleteEducation"
-                 OnCancel="HideDeleteModal" />
 }
-else
-{
-    <p>No education details available.</p>
-}
+
+<DeleteModal Title="Delete Education"
+             Message="Are you sure you want to delete this education record?"
+             IsVisible="@isDeleteModalVisible"
+             OnConfirm="DeleteEducation"
+             OnCancel="HideDeleteModal" />
 
 @code {
     [Parameter] public string? id { get; set; }
     private List<EducationModel>? educationModels;
     private bool isLoading = true;
     private string? errorMessage = null;
-    private bool isEditFormVisible = false;
     private bool isDeleteModalVisible = false;
     private int SelectedIDtoDelete { get; set; }
 
     private EducationModel educationModel = new EducationModel();
+    private EducationFormModal? educationFormModal;
 
     protected override async Task OnInitializedAsync()
     {
@@ -88,19 +83,19 @@ else
 
     private async Task LoadEducation()
     {
-        educationModels = await educationService.GetEducationByIdAsync(id);
+        educationModels = await educationService.GetEducationByIdAsync(id!);
     }
 
-    private void EditEducation(int id)
+    private void AddNewEducation()
     {
-        isEditFormVisible = true;
-        educationModel = educationModels.FirstOrDefault(x => x.EducationID == id)!;
-        StateHasChanged();
+        educationModel = new EducationModel(); // Reset the form for new entry
+        educationFormModal?.ShowModal();
     }
 
-    private void HideEditForm()
+    private void EditEducation(EducationModel educationModel)
     {
-        isEditFormVisible = false;
+        this.educationModel = educationModel;
+        educationFormModal?.ShowModal();
     }
 
     private async Task DeleteEducation()
