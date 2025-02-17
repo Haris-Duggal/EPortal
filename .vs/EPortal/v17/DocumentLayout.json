@@ -1,48 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapi\\services\\developmentskillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|solutionrelative:eportalapi\\services\\developmentskillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapplication\\components\\pages\\profile\\skills.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|solutionrelative:eportalapplication\\components\\pages\\profile\\skills.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapplication\\services\\skillsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|solutionrelative:eportalapplication\\services\\skillsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapi\\controllers\\developmentskillcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|solutionrelative:eportalapi\\controllers\\developmentskillcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapi\\controllers\\teachingskillcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|solutionrelative:eportalapi\\controllers\\teachingskillcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapi\\services\\teachingskillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DD87A7F-DA4C-4884-9EDB-FBB899637849}|EPortalAPI\\EPortalAPI.csproj|solutionrelative:eportalapi\\services\\teachingskillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapplication\\components\\pages\\profile\\addskill.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|solutionrelative:eportalapplication\\components\\pages\\profile\\addskill.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapplication\\services\\experienceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|solutionrelative:eportalapplication\\services\\experienceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapplication\\components\\pages\\profile\\experience.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|solutionrelative:eportalapplication\\components\\pages\\profile\\experience.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|c:\\users\\haris duggal\\source\\repos\\eportal\\eportalapplication\\components\\pages\\profile\\editskill.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1BD35826-3381-4E15-80C7-4C952FC16966}|EPortalApplication\\EPortalApplication.csproj|solutionrelative:eportalapplication\\components\\pages\\profile\\editskill.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -50,129 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DevelopmentSkillService.cs",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Services\\DevelopmentSkillService.cs",
-              "RelativeDocumentMoniker": "EPortalAPI\\Services\\DevelopmentSkillService.cs",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Services\\DevelopmentSkillService.cs",
-              "RelativeToolTip": "EPortalAPI\\Services\\DevelopmentSkillService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T17:28:55.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TeachingSkillService.cs",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Services\\TeachingSkillService.cs",
-              "RelativeDocumentMoniker": "EPortalAPI\\Services\\TeachingSkillService.cs",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Services\\TeachingSkillService.cs",
-              "RelativeToolTip": "EPortalAPI\\Services\\TeachingSkillService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T15:50:57.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TeachingSkillController.cs",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Controllers\\TeachingSkillController.cs",
-              "RelativeDocumentMoniker": "EPortalAPI\\Controllers\\TeachingSkillController.cs",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Controllers\\TeachingSkillController.cs",
-              "RelativeToolTip": "EPortalAPI\\Controllers\\TeachingSkillController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T15:17:56.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DevelopmentSkillController.cs",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Controllers\\DevelopmentSkillController.cs",
-              "RelativeDocumentMoniker": "EPortalAPI\\Controllers\\DevelopmentSkillController.cs",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalAPI\\Controllers\\DevelopmentSkillController.cs",
-              "RelativeToolTip": "EPortalAPI\\Controllers\\DevelopmentSkillController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAqwGIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T15:17:24.485Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExperienceService.cs",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Services\\ExperienceService.cs",
-              "RelativeDocumentMoniker": "EPortalApplication\\Services\\ExperienceService.cs",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Services\\ExperienceService.cs",
-              "RelativeToolTip": "EPortalApplication\\Services\\ExperienceService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwEYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T15:01:12.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SkillsService.cs",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Services\\SkillsService.cs",
-              "RelativeDocumentMoniker": "EPortalApplication\\Services\\SkillsService.cs",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Services\\SkillsService.cs",
-              "RelativeToolTip": "EPortalApplication\\Services\\SkillsService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAiwGsAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T13:41:07.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Experience.razor",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\Experience.razor",
-              "RelativeDocumentMoniker": "EPortalApplication\\Components\\Pages\\Profile\\Experience.razor",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\Experience.razor",
-              "RelativeToolTip": "EPortalApplication\\Components\\Pages\\Profile\\Experience.razor",
-              "ViewState": "AgIAADQAAAAAAAAAAAAnwEgAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T14:20:46.668Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddSkill.razor",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\AddSkill.razor",
-              "RelativeDocumentMoniker": "EPortalApplication\\Components\\Pages\\Profile\\AddSkill.razor",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\AddSkill.razor",
-              "RelativeToolTip": "EPortalApplication\\Components\\Pages\\Profile\\AddSkill.razor",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAADwAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T14:00:23.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EditSkill.razor",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\EditSkill.razor",
-              "RelativeDocumentMoniker": "EPortalApplication\\Components\\Pages\\Profile\\EditSkill.razor",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\EditSkill.razor",
-              "RelativeToolTip": "EPortalApplication\\Components\\Pages\\Profile\\EditSkill.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T13:48:17.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Skills.razor",
-              "DocumentMoniker": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\Skills.razor",
-              "RelativeDocumentMoniker": "EPortalApplication\\Components\\Pages\\Profile\\Skills.razor",
-              "ToolTip": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\Components\\Pages\\Profile\\Skills.razor",
-              "RelativeToolTip": "EPortalApplication\\Components\\Pages\\Profile\\Skills.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-10T13:38:30.319Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
