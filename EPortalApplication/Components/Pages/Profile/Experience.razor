@@ -1,95 +1,119 @@
-﻿@inject ExperienceService ExperienceService
-@rendermode InteractiveServer
+﻿@inject ExperienceService experienceService
+@inject JsonService jsonService
 
-@if (ExperienceModels != null && ExperienceModels.Any())
+<ExperienceFormModal @ref="experienceFormModal" ExperienceData="selectedExperience" ChangeState="LoadExperience" />
+
+<button class="btn btn-success mb-3" @onclick="AddNewExperience">Add New Experience</button>
+
+@if (isLoading)
 {
-
+    <p>Loading...</p>
+}
+else if (errorMessage != null)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+else if (experienceModels != null && experienceModels.Any())
+{
     <table class="table table-bordered">
         <thead>
-        <tr>
-            <th>Title</th>
-            <th>Employment Type</th>
-            <th>Company Name</th>
-            <th>Currently Working</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Location</th>
-            <th>Location Type</th>
-            <th>Description</th>
-            <th>Actions</th>
-        </tr>
+            <tr>
+                <th>Title</th>
+                <th>Employment Type</th>
+                <th>Company Name</th>
+                <th>Currently Working</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Location</th>
+                <th>Location Type</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
         </thead>
         <tbody>
-        @foreach (var ExperienceModel in ExperienceModels)
-        {
-            <tr>
-                <td>@ExperienceModel.Title</td>
-                <td>@ExperienceModel.EmploymentType</td>
-                <td>@ExperienceModel.CompanyName</td>
-                <td>@ExperienceModel.CurrentlyWorking</td>
-                <td>@ExperienceModel.StartDate</td>
-                <td>@ExperienceModel.EndDate</td>
-                <td>@ExperienceModel.Location</td>
-                <td>@ExperienceModel.LocationType</td>
-                <td>@ExperienceModel.Description</td>
-                <td>
-                    <button class="btn btn-primary" @onclick="() => EditExperience(ExperienceModel.ExperienceID)">Edit</button>
-                    <button class="btn btn-danger" @onclick="() => ShowDeleteModal(ExperienceModel.ExperienceID)">Delete</button>
-                </td>
-            </tr>
-        }
+            @foreach (var experienceModel in experienceModels)
+            {
+                <tr>
+                    <td>@experienceModel.Title</td>
+                    <td>@experienceModel.EmploymentType</td>
+                    <td>@experienceModel.CompanyName</td>
+                    <td>@experienceModel.CurrentlyWorking</td>
+                    <td>@experienceModel.StartDate</td>
+                    <td>@experienceModel.EndDate</td>
+                    <td>@experienceModel.Location</td>
+                    <td>@experienceModel.LocationType</td>
+                    <td>@experienceModel.Description</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => EditExperience(experienceModel)">Edit</button>
+                        <button class="btn btn-danger" @onclick="() => ShowDeleteModal(experienceModel.ExperienceID)">Delete</button>
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
-
-    @if (isEditFormVisible)
-    {
-        <EditExperience UpdateModel="selectedModel" ChangeState="HideEditForm" />
-    }
-
-    <DeleteModal Title="Delete Experience"
-                 Message="Are you sure you want to delete this experience record?"
-                 IsVisible="@isDeleteModalVisible"
-                 OnConfirm="DeleteExperience"
-                 OnCancel="HideDeleteModal" />
 }
 
-@code {
-    [Parameter] public string? id { get; set; }
+<DeleteModal Title="Delete Experience"
+             Message="Are you sure you want to delete this experience record?"
+             IsVisible="@isDeleteModalVisible"
+             OnConfirm="DeleteExperience"
+             OnCancel="HideDeleteModal" />
 
-    private List<ExperienceModel>? ExperienceModels;
-    private ExperienceModel selectedModel = new ExperienceModel();
-    private bool isEditFormVisible = false;
+@code {
+    [Parameter] public string? id { get; set; } // Added id parameter
+
+    private List<ExperienceModel>? experienceModels;
+    private bool isLoading = true;
+    private string? errorMessage = null;
     private bool isDeleteModalVisible = false;
-    private int SelectedIDtoDelete { get; set; }
+    private int selectedIDtoDelete;
+    private ExperienceModel selectedExperience = new ExperienceModel();
+    private ExperienceFormModal? experienceFormModal;
 
     protected override async Task OnInitializedAsync()
     {
-        ExperienceModels = await ExperienceService.GetExperienceByIdAsync(id!);
+        try
+        {
+            await LoadExperience();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading experience data: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
     }
 
-    private void EditExperience(int id)
+    private async Task LoadExperience()
     {
-        isEditFormVisible = true;
-        selectedModel = ExperienceModels!.FirstOrDefault(x => x.ExperienceID == id)!;
-        StateHasChanged();
+        experienceModels = await experienceService.GetExperienceByIdAsync(id!); // Now using id
     }
 
-    private void HideEditForm()
+    private void AddNewExperience()
     {
-        isEditFormVisible = false;
+        selectedExperience = new ExperienceModel();
+        experienceFormModal?.ShowModal();
     }
 
-    private void ShowDeleteModal(int id)
+    private void EditExperience(ExperienceModel experienceModel)
     {
-        SelectedIDtoDelete = id;
-        isDeleteModalVisible = true;
+        selectedExperience = experienceModel;
+        experienceFormModal?.ShowModal();
     }
 
     private async Task DeleteExperience()
     {
-        await ExperienceService.DeleteExperience(SelectedIDtoDelete);
-        ExperienceModels = await ExperienceService.GetExperienceByIdAsync(id!);
+        await experienceService.DeleteExperience(selectedIDtoDelete);
+        await LoadExperience();
         isDeleteModalVisible = false;
+    }
+
+    private void ShowDeleteModal(int id)
+    {
+        selectedIDtoDelete = id;
+        isDeleteModalVisible = true;
     }
 
     private void HideDeleteModal()

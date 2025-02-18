@@ -14,6 +14,7 @@ builder.Services.AddScoped<EducationService>();
 builder.Services.AddScoped<ExperienceService>();
 builder.Services.AddScoped<JsonService>();
 builder.Services.AddScoped<SkillsService>();
+builder.Services.AddScoped<ContactInfoService>();
 
 
 builder.Services.AddHttpClient("API", client =>

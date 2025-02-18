@@ -40,15 +40,10 @@ else if (personalProfile != null)
             <div class="col-md-12">
                <div class="d-flex justify-content-between mb-5">
                     <div>  <h3>Education</h3></div>
-                    <div> <button class="btn btn-primary" @onclick="ShowAddForm">+</button></div>
+                   
                   
                </div>
-                <div>
-                    @if (isAddFormVisible)
-                    {
-                        <AddEducation ChangeState="HideAddForm" />
-                    }
-                </div>
+                
                 <div> <Education id="@id" @key="@educationListKey" /></div>
             </div>
         </div>
@@ -59,15 +54,10 @@ else if (personalProfile != null)
             <div class="col-md-12">
                 <div class="d-flex justify-content-between mb-5">
                     <div>  <h3>Experience</h3></div>
-                    <div> <button class="btn btn-primary" @onclick="ShowExperienceForm">+</button></div>
+                    
 
                 </div>
-                <div>
-                    @if (isExperienceFormVisible)
-                    {
-                        <AddExperience ChangeState="HideExperienceForm" />
-                    }
-                </div>
+                
                 <div> <Experience id="@id" @key="experienceListKey" /></div>
             </div>
         </div>
@@ -78,19 +68,29 @@ else if (personalProfile != null)
             <div class="col-md-12">
                 <div class="d-flex justify-content-between mb-5">
                     <div>  <h3>Skills</h3></div>
-                    <div> <button class="btn btn-primary" @onclick="ShowSkillForm">+</button></div>
-
                 </div>
-                <div>
-                    @if (isSkillFormVisible)
-                    {
-                        <AddSkill ChangeState="HideSkillForm" />
-                    }
-                </div>
+               
                 <div> <Skills id="@id" @key="skillListKey" /></div>
             </div>
         </div>
     </section>
+
+    <section class="container bg-light mt-5 shadow-sm mb-5">
+        <div class="container p-5">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between mb-5">
+                    <div>  <h3>ContactInfo</h3></div>
+                    
+
+                </div>
+
+                <div> <ContactInfo id="@id" /></div>
+            </div>
+        </div>
+    </section>
+
+   
+
     @* <table class="table table-bordered"> *@
       
     @*     <tr> *@
@@ -143,9 +143,9 @@ else if (personalProfile != null)
 
 @code {
     [Parameter] public string? id { get; set; }
-    bool isAddFormVisible = false;
-    bool isExperienceFormVisible = false;
-    bool isSkillFormVisible = false;
+    
+   
+    
     bool isLoading = true;
     string? errorMessage = null;
 
@@ -172,36 +172,11 @@ else if (personalProfile != null)
         }
     }
 
-    private void ShowAddForm()
-    {
-        isAddFormVisible = true;
-    }
+    
 
-    private void HideAddForm()
-    {
-        isAddFormVisible = false;
-        educationListKey = Guid.NewGuid();
-    }
+   
 
-    private void ShowExperienceForm()
-    {
-        isExperienceFormVisible = !isExperienceFormVisible;
-    }
+    
 
-    private void HideExperienceForm()
-    {
-        isExperienceFormVisible = false;
-        experienceListKey = Guid.NewGuid();
-    }
-
-    private void ShowSkillForm()
-    {
-        isSkillFormVisible = true;
-    }
-
-    private void HideSkillForm()
-    {
-        isSkillFormVisible = false;
-        skillListKey = Guid.NewGuid();
-    }
+    
 }

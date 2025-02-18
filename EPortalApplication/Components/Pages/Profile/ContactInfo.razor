@@ -1,0 +1,101 @@
+﻿@inject ContactInfoService contactInfoService
+@rendermode InteractiveServer
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Area</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>@Contact.PhoneNumber</td>
+            <td>@Contact.Email</td>
+            <td>@Contact.City</td>
+            <td>@Contact.Area</td>
+            <td>@Contact.Location</td>
+            <td>
+                    
+                
+                    <button class="btn btn-warning" @onclick="() => EditContact(Contact.fk_UserID)">Edit</button>
+                    <button class="btn btn-danger" @onclick="() => ShowDeleteModal(Contact.fk_UserID)">Delete</button>
+                
+            </td>
+        </tr>
+
+        @if (isEditContactFormVisible)
+        {
+            <tr>
+                <td colspan="6">
+                    <EditContactInfo contact="Contact" ChangeState="HideForm" />
+                </td>
+            </tr>
+        }
+
+        <DeleteModal Title="Delete COntact Info" Message="Are you sure you want to delete this ContactInfo record?"
+        IsVisible="@isDeleteModalVisibe"
+        OnConfirm="DeleteContact"
+        OnCancel="HideDeleteModal"/>
+    </tbody>
+</table>
+
+@code {
+    [Parameter] public string? id { get; set; }
+    private ContactInfoModel Contact = new ContactInfoModel();
+    private string? errorMessage { get; set; }
+    private bool isEditContactFormVisible = false;
+    private bool isDeleteModalVisibe= false;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await LoadContactInfo();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading contact data: {ex.Message}";
+        }
+    }
+
+    private async Task LoadContactInfo()
+    {
+        Contact = await contactInfoService.GetContactbyID(id!);
+    }
+
+    private void EditContact(string id)
+    {
+        isEditContactFormVisible = !isEditContactFormVisible;
+        StateHasChanged();
+    }
+
+    private void HideForm()
+    {
+        isEditContactFormVisible = false;
+        StateHasChanged();
+    }
+
+    private async Task DeleteContact()
+    {
+        await contactInfoService.DeleteContactInfo(Contact.fk_UserID!);
+        await LoadContactInfo();
+        isDeleteModalVisibe = false;
+
+    }
+    private void ShowDeleteModal(string id)
+    {
+        isDeleteModalVisibe = true;
+    }
+
+    private void HideDeleteModal()
+    {
+        isDeleteModalVisibe = false;
+    }
+}

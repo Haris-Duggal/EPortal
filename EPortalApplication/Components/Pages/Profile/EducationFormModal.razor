@@ -1,0 +1,140 @@
+﻿@inject EducationService educationService
+@inject JsonService jsonService
+
+@if (IsVisible)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Education Form</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="@educationModel" OnValidSubmit="SaveEducation">
+                        <DataAnnotationsValidator />
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Institute Name -->
+                            <InputText class="form-control" placeholder="Enter Institute Name" @bind-value=educationModel.InstituteName />
+                            <ValidationMessage For="()=>educationModel.InstituteName" />
+
+                            <!-- Degree -->
+                            <select class="form-control" @onchange="@SetDegree">
+                                <option value="">Select Degree</option>
+                                @foreach (var degree in Degrees!)
+                                {
+                                    <option value="@degree.DegreeType">@degree.DegreeType</option>
+                                }
+                            </select>
+                            <ValidationMessage For="()=>educationModel.Degree" />
+
+                            <!-- Field of Study -->
+                            @if (DegreeMajors != null)
+                            {
+                                <select class="form-control" @bind="educationModel.FieldOfStudy">
+                                    <option value="">Select Major</option>
+                                    @foreach (var major in DegreeMajors)
+                                    {
+                                        <option value="@major">@major</option>
+                                    }
+                                </select>
+                            }
+                            else
+                            {
+                                <select class="form-control">
+                                    <option value="">Select Major</option>
+                                </select>
+                            }
+                            <ValidationMessage For="()=>educationModel.FieldOfStudy" />
+
+                            <!-- Start Date -->
+                            <input type="date" class="form-control" @bind-value=educationModel.StartDate />
+                            <ValidationMessage For="()=>educationModel.StartDate" />
+
+                            <!-- End Date -->
+                            <input type="date" class="form-control" @bind-value=educationModel.EndDate />
+                            <ValidationMessage For="()=>educationModel.EndDate" />
+
+                            <!-- Grade -->
+                            <InputText class="form-control" placeholder="Enter Grade" @bind-value=educationModel.Range />
+                            <ValidationMessage For="()=>educationModel.Range" />
+
+                            <button type="submit" class="btn btn-primary">
+                                @(educationModel.EducationID == 0 ? "Add" : "Update")
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public EducationModel? EducationData { get; set; }
+    [Parameter] public EventCallback ChangeState { get; set; }
+
+    private EducationModel educationModel = new EducationModel();
+    private List<Degree>? Degrees { get; set; }
+    private List<string>? DegreeMajors { get; set; }
+    private bool IsVisible { get; set; } = false;
+
+    protected override void OnInitialized()
+    {
+        Degrees = jsonService.UseJArrayParseInNewtonsoftJson();
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (EducationData != null)
+        {
+            educationModel = new EducationModel
+                {
+                    EducationID = EducationData.EducationID,
+                    InstituteName = EducationData.InstituteName,
+                    Degree = EducationData.Degree,
+                    FieldOfStudy = EducationData.FieldOfStudy,
+                    StartDate = EducationData.StartDate,
+                    EndDate = EducationData.EndDate,
+                    Range = EducationData.Range
+                };
+
+            SetDegree(new ChangeEventArgs { Value = educationModel.Degree });
+        }
+    }
+
+    private void SetDegree(ChangeEventArgs args)
+    {
+        educationModel.Degree = args.Value?.ToString();
+        var degreeObj = Degrees?.Find(d => d.DegreeType == educationModel.Degree);
+        DegreeMajors = degreeObj?.Majors ?? new List<string>();
+        educationModel.FieldOfStudy = string.Empty;
+    }
+
+    private async Task SaveEducation()
+    {
+        if (educationModel.EducationID == 0)
+        {
+            await educationService.CreateEducation(educationModel);
+        }
+        else
+        {
+            await educationService.UpdateEducation(educationModel.EducationID, educationModel);
+        }
+
+        await ChangeState.InvokeAsync();
+        CloseModal();
+    }
+
+    public void ShowModal()
+    {
+        IsVisible = true;
+        StateHasChanged();
+    }
+
+    public void CloseModal()
+    {
+        IsVisible = false;
+        StateHasChanged();
+    }
+}

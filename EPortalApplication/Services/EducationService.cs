@@ -54,7 +54,7 @@ namespace EPortalApplication.Services
             }
         }
 
-        public async Task CreateEducation(CreateEducationDTO education)
+        public async Task CreateEducation(EducationModel education)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace EPortalApplication.Services
         {
             try
             {
-                await _httpClient.DeleteAsync($"api/Education/{id}");
+                await _httpClient!.DeleteAsync($"api/Education/{id}");
             }
             catch (Exception ex)
             {

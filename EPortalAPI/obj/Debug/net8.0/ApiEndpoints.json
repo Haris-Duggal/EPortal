@@ -51,7 +51,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.DTOs.ContactInfoDTO",
+        "Type": "Entities.Models.ContactInfoModel",
         "MediaTypes": [
           "text/plain",
           "application/json",

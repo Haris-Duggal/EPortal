@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FL9HHLNJFWupNFzm9RlMRh3pr/bHT3m0DaaUHGXNkj0=",
+  "Hash": "ITL5Vg31VEifE0leoNZbgLwQXZuMJ9X21oOZbEBzyNY=",
   "Source": "EPortalApplication",
   "BasePath": "_content/EPortalApplication",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EPortalApplication\\wwwroot",
       "Source": "EPortalApplication",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "EPortalApplication#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css"
+      "OriginalItemSpec": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "EPortalApplication#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css"
+      "OriginalItemSpec": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\app.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -94,17 +94,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bpk8xqwxhs",
-      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "data/degrees#[.{fingerprint}]?.json",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\data\\degrees.json"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "data/DevelopmentSkills#[.{fingerprint}]?.json",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\data\\DevelopmentSkills.json"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "data/TeachingSkills#[.{fingerprint}]?.json",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\data\\TeachingSkills.json"
     },
     {
-      "Identity": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -209,7 +209,7 @@
   "Endpoints": [
     {
       "Route": "app.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -230,7 +230,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -246,7 +246,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -267,7 +267,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -290,8 +290,8 @@
       ]
     },
     {
-      "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -300,7 +300,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162726"
         },
         {
           "Name": "Content-Type",
@@ -308,11 +308,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -322,7 +322,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bpk8xqwxhs"
+          "Value": "6gzpyzhau4"
         },
         {
           "Name": "label",
@@ -330,13 +330,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -345,7 +345,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "162720"
+          "Value": "162726"
         },
         {
           "Name": "Content-Type",
@@ -353,11 +353,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -367,13 +367,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -394,7 +394,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -418,7 +418,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -439,7 +439,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -455,7 +455,7 @@
     },
     {
       "Route": "data/degrees.json",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -476,7 +476,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Feb 2025 19:10:36 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -492,7 +492,7 @@
     },
     {
       "Route": "data/degrees.z7o5vyn8hk.json",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -513,7 +513,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Feb 2025 19:10:36 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -537,7 +537,7 @@
     },
     {
       "Route": "data/DevelopmentSkills.ebea5nqy1q.json",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -558,7 +558,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 12:59:01 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -582,7 +582,7 @@
     },
     {
       "Route": "data/DevelopmentSkills.json",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -603,7 +603,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 12:59:01 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -619,7 +619,7 @@
     },
     {
       "Route": "data/TeachingSkills.2bxpswublu.json",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -640,7 +640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 12:49:51 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -664,7 +664,7 @@
     },
     {
       "Route": "data/TeachingSkills.json",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -685,7 +685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 12:49:51 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -701,7 +701,7 @@
     },
     {
       "Route": "EPortalApplication.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -722,7 +722,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:24:47 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -738,7 +738,7 @@
     },
     {
       "Route": "EPortalApplication.styles.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -759,7 +759,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:24:47 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -775,7 +775,7 @@
     },
     {
       "Route": "EPortalApplication.wz5j36h8ju.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -796,7 +796,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:24:47 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -820,7 +820,7 @@
     },
     {
       "Route": "EPortalApplication.wz5j36h8ju.styles.css",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -841,7 +841,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:24:47 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -865,7 +865,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -886,7 +886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -910,7 +910,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\Haris Duggal\\source\\repos\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -931,7 +931,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 28 Jan 2025 16:22:52 GMT"
+          "Value": "Mon, 10 Feb 2025 13:22:25 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -1,13 +1,19 @@
-﻿using System.Data.SqlTypes;
-using Database;
+﻿using Database;
 using Entities.Models;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.SqlClient;
 
 namespace EPortalAPI.Services
 {
+    /// <summary>
+    /// ContactInfoService.
+    /// </summary>
     public class ContactInfoService : IContactInfoService
     {
+        /// <summary>
+        /// ContactInfoModels,
+        /// </summary>
+        /// <param name="procedureName"></param>
+        /// <returns></returns>
         public async Task<List<ContactInfoModel>> ContactInfoModels(string procedureName)
         {
             try
