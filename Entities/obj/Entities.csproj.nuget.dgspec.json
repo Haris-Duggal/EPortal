@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\Entities\\Entities.csproj": {}
+    "E:\\Users\\Sajid\\source\\repos\\EPortalGitHub\\EPortal\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\Entities\\Entities.csproj": {
+    "E:\\Users\\Sajid\\source\\repos\\EPortalGitHub\\EPortal\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\Users\\Sajid\\source\\repos\\EPortalGitHub\\EPortal\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Haris Duggal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\Entities\\obj\\",
+        "projectPath": "E:\\Users\\Sajid\\source\\repos\\EPortalGitHub\\EPortal\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Sajid\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\Sajid\\source\\repos\\EPortalGitHub\\EPortal\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Haris Duggal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sajid\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
