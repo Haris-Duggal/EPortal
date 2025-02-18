@@ -32,12 +32,12 @@ namespace EPortalAPI.Services
             }
         }
 
-        public async Task<ContactInfoModel> ContactInfoModel(string procedureName, SqlParameter[] sp)
+        public async Task<List<ContactInfoModel>> ContactInfoModel(string procedureName, SqlParameter[] sp)
         {
             try
             {
                 var result = await DALCRUD.GetEntitiesFromReadDataAsync<ContactInfoModel>(procedureName, sp);
-                return result.FirstOrDefault()!;
+                return result!;
             }
             catch (SqlException sqlEx)
             {

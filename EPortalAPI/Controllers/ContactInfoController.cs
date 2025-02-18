@@ -35,7 +35,7 @@ namespace EPortalAPI.Controllers
         }
 
         [HttpGet("{userId}")]
-        public async Task<ActionResult<ContactInfoModel>> ContactInfoModel(string userId)
+        public async Task<ActionResult<List<ContactInfoModel>>> ContactInfoModel(string userId)
         {
             try
             {

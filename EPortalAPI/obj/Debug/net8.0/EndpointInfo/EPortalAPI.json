@@ -93,17 +93,26 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContactInfoModel"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContactInfoModel"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContactInfoModel"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContactInfoModel"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ContactInfoModel"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContactInfoModel"
+                  }
                 }
               }
             }

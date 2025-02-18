@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ITL5Vg31VEifE0leoNZbgLwQXZuMJ9X21oOZbEBzyNY=",
+  "Hash": "KZF15XZDqpnzJAUzELKfvazJFc3Wl8EhM/GN55LeBcE=",
   "Source": "EPortalApplication",
   "BasePath": "_content/EPortalApplication",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EPortalApplication\\wwwroot",
       "Source": "EPortalApplication",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "EPortalApplication#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "EPortalApplication#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "HHC3NsfABsM+a+6VLFHNOXYXaNQfRRDjcJ5YcKm2JB0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\app.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "data/degrees#[.{fingerprint}]?.json",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\data\\degrees.json"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "data/DevelopmentSkills#[.{fingerprint}]?.json",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\data\\DevelopmentSkills.json"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "data/TeachingSkills#[.{fingerprint}]?.json",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\data\\TeachingSkills.json"
     },
     {
-      "Identity": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
       "SourceId": "EPortalApplication",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\",
       "BasePath": "_content/EPortalApplication",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -209,7 +209,7 @@
   "Endpoints": [
     {
       "Route": "app.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -246,7 +246,7 @@
     },
     {
       "Route": "app.da95v2qkru.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\app.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -291,7 +291,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -336,7 +336,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -373,7 +373,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -418,7 +418,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -455,7 +455,7 @@
     },
     {
       "Route": "data/degrees.json",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -492,7 +492,7 @@
     },
     {
       "Route": "data/degrees.z7o5vyn8hk.json",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\degrees.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -537,7 +537,7 @@
     },
     {
       "Route": "data/DevelopmentSkills.ebea5nqy1q.json",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -582,7 +582,7 @@
     },
     {
       "Route": "data/DevelopmentSkills.json",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\DevelopmentSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -619,7 +619,7 @@
     },
     {
       "Route": "data/TeachingSkills.2bxpswublu.json",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -664,7 +664,7 @@
     },
     {
       "Route": "data/TeachingSkills.json",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\data\\TeachingSkills.json",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -701,7 +701,7 @@
     },
     {
       "Route": "EPortalApplication.bundle.scp.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -738,7 +738,7 @@
     },
     {
       "Route": "EPortalApplication.styles.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -775,7 +775,7 @@
     },
     {
       "Route": "EPortalApplication.wz5j36h8ju.bundle.scp.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EPortalApplication.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -820,7 +820,7 @@
     },
     {
       "Route": "EPortalApplication.wz5j36h8ju.styles.css",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EPortalApplication.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -865,7 +865,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -910,7 +910,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "E:\\Users\\Sajid\\source\\repos\\EportalGit\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Users\\Haris Duggal\\Documents\\oooo\\EPortal\\EPortalApplication\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {

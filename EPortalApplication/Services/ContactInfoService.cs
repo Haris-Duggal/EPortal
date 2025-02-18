@@ -23,17 +23,17 @@ namespace EPortalApplication.Services
             }
         }
 
-        public async Task<ContactInfoModel> GetContactbyID(string uid)
+        public async Task<List<ContactInfoModel>> GetContactbyID(string uid)
         {
             try
             {
-                var response = await _httpClient!.GetFromJsonAsync<ContactInfoModel>($"api/ContactInfo/{uid}");
-                return response ?? new ContactInfoModel();
+                var response = await _httpClient!.GetFromJsonAsync<List<ContactInfoModel>>($"api/ContactInfo/{uid}");
+                return response ?? new List<ContactInfoModel>();
             }
             catch(Exception ex)
             {
                 Console.Error.WriteLine($"Error: {ex.Message}");
-                return new ContactInfoModel();
+                return new List<ContactInfoModel>();
             }
             
         }

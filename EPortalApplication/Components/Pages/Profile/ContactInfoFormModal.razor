@@ -1,0 +1,93 @@
+﻿@inject ContactInfoService contactInfoService
+@inject JsonService jsonService
+
+@if (IsVisible)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Form</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="@contactModel" OnValidSubmit="SaveContact">
+                        <DataAnnotationsValidator />
+
+                        <div class="d-flex flex-column gap-2">
+                            <InputText class="form-control" placeholder="Phone Number" @bind-value=contactModel.PhoneNumber />
+                            <ValidationMessage For="()=>contactModel.PhoneNumber" />
+
+                            <InputText class="form-control" placeholder="Email" @bind-value=contactModel.Email />
+                            <ValidationMessage For="()=>contactModel.Email" />
+
+                            <InputText class="form-control" placeholder="City" @bind-value=contactModel.City />
+                            <ValidationMessage For="()=>contactModel.City" />
+
+                            <InputText class="form-control" placeholder="Area" @bind-value=contactModel.Area />
+                            <ValidationMessage For="()=>contactModel.Area" />
+
+                            <InputText class="form-control" placeholder="Location" @bind-value=contactModel.Location />
+                            <ValidationMessage For="()=>contactModel.Location" />
+
+                            <button type="submit" class="btn btn-primary">
+                                @(contactModel.fk_UserID == null ? "Add" : "Update")
+                            </button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public ContactInfoModel? ContactData { get; set; }
+    [Parameter] public EventCallback ChangeState { get; set; }
+
+    private ContactInfoModel contactModel = new ContactInfoModel();
+    private bool IsVisible { get; set; } = false;
+
+    protected override void OnParametersSet()
+    {
+        if (ContactData != null)
+        {
+            contactModel = new ContactInfoModel
+            {
+                fk_UserID = ContactData.fk_UserID,
+                PhoneNumber = ContactData.PhoneNumber,
+                Email = ContactData.Email,
+                City = ContactData.City,
+                Area = ContactData.Area,
+                Location = ContactData.Location
+            };
+        }
+    }
+
+    private async Task SaveContact()
+    {
+        if (contactModel.fk_UserID == null)
+        {
+            await contactInfoService.AddContactInfo(contactModel);
+        }
+        else
+        {
+            await contactInfoService.EditContactInfo(contactModel);
+        }
+
+        await ChangeState.InvokeAsync();
+        CloseModal();
+    }
+
+    public void ShowModal()
+    {
+        IsVisible = true;
+        StateHasChanged();
+    }
+
+    public void CloseModal()
+    {
+        IsVisible = false;
+        StateHasChanged();
+    }
+}

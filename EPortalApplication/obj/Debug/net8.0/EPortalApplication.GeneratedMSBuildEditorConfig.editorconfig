@@ -40,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXENvbnRhY3RJbmZvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Haris Duggal/Documents/oooo/EPortal/EPortalApplication/Components/Pages/Profile/ContactInfoFormModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXENvbnRhY3RJbmZvRm9ybU1vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Haris Duggal/Documents/oooo/EPortal/EPortalApplication/Components/Pages/Profile/DeleteModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9maWxlXERlbGV0ZU1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

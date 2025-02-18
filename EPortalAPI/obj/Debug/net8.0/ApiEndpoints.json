@@ -51,7 +51,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entities.Models.ContactInfoModel",
+        "Type": "System.Collections.Generic.List\u00601[[Entities.Models.ContactInfoModel, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
