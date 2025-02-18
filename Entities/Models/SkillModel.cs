@@ -8,6 +8,7 @@ namespace Entities.Models
         public string? fk_UserID { get; set; }
 
         [Required(ErrorMessage = "Skill Name is required.")]
+        [RegularExpression(@"^[a-zA-Z0-9\s]+$", ErrorMessage = "Skill Name cannot contain special characters.")]
         public string? SkillName { get; set; }
 
         [Required(ErrorMessage = "Skill Type is required.")]

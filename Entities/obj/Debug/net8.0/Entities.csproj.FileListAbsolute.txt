@@ -46,3 +46,15 @@ C:\Users\Haris Duggal\Documents\oooo\EPortal\Entities\obj\Debug\net8.0\Entities.
 C:\Users\Haris Duggal\Documents\oooo\EPortal\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\Haris Duggal\Documents\oooo\EPortal\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Users\Haris Duggal\Documents\oooo\EPortal\Entities\obj\Debug\net8.0\ref\Entities.dll
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\bin\Debug\net8.0\Entities.deps.json
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\bin\Debug\net8.0\Entities.dll
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\bin\Debug\net8.0\Entities.pdb
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\Entities.dll
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\refint\Entities.dll
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\Entities.pdb
+E:\Users\Sajid\source\repos\EPortalGitHub\EPortal\Entities\obj\Debug\net8.0\ref\Entities.dll

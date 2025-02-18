@@ -1031,11 +1031,13 @@
           },
           "phoneNumber": {
             "minLength": 1,
+            "pattern": "^\\d{10,15}$",
             "type": "string"
           },
           "email": {
             "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "format": "email"
           },
           "city": {
             "type": "string",
@@ -1047,6 +1049,7 @@
           },
           "location": {
             "minLength": 1,
+            "pattern": "^[a-zA-Z0-9\\s]+$",
             "type": "string"
           }
         },
